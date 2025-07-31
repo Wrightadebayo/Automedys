@@ -1,46 +1,31 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './component/Navbar';
-import Hero from './component/Hero';
-import Services from './component/Services';
-import Condition from './component/Condition';
-import MeetUs from './component/MeetUs';
-import FeedBack from './component/FeedBack';
-import FAQ from './component/FAQ';
-import Latest from './component/Latest';
-import Contact from './component/Contact';
-import Footer from './component/Footer';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Home, Service, About, Contact, Layout } from './component';
 
-const Home = () => (
-  <>
-    <Hero />
-    <Services />
-    <Condition />
-    <MeetUs />
-    <FeedBack />
-    <FAQ />
-    <Latest />
-    <Contact />
-  </>
-);
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />, // Navbar will be shared across these routes
+    children: [
+      { path: '/', element: <Home /> },
+      { path: '/service', element: <Service /> },
+      { path: '/about', element: <About Us/> },
+      { path: '/contact', element: <Contact Us /> },
+    ],
+  },
+]);
 
-const App = () => {
-  return (
-    <Router>
-      <div className="w-full bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <Navbar />
-
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-          </Routes>
-
-          <Footer />
-        </div>
-      </div>
-    </Router>
-  );
-};
+function App() {
+  return <RouterProvider router={router} />;
+}
 
 export default App;
+
+
+
+
+
+
+  
+
+
 

@@ -1,26 +1,29 @@
-
-import { useState } from 'react'
-import {AiOutlineMinus,AiOutlinePlus} from 'react-icons/ai';
+import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
 
 const SingleQuestions = ({ title, response }) => {
-  const [showInfo, setShowInfo] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <article className="border border-gray-200 rounded-lg p-4 shadow-sm bg-white mt-4">
-      <header
-        className="flex justify-between items-center cursor-pointer"
-        onClick={() => setShowInfo(!showInfo)}
+    <div className="border border-gray-200 rounded-lg bg-white shadow-sm transition-all">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex justify-between items-center px-4 py-3 text-left text-base sm:text-lg font-medium text-gray-800 focus:outline-none"
       >
-        <h5 className="text-sm  text-black">{title}</h5>
-        <button className="text-black text-sm">
-          {showInfo ? <AiOutlineMinus /> : <AiOutlinePlus />}
-        </button>
-      </header>
-      {showInfo && (
-        <p className="mt-2 text-gray-500 text-sm">{response}</p>
+        <span className="flex-1">{title}</span>
+        <FaChevronDown
+          className={`ml-2 transform transition-transform duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+      {isOpen && (
+        <div className="px-4 pb-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+          {response}
+        </div>
       )}
-    </article>
+    </div>
   );
 };
 
-export default SingleQuestions
+export default SingleQuestions;

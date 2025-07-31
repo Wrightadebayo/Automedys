@@ -18,20 +18,30 @@ const Hero = () => {
           Compassionate, evidence-based mental healthcare tailored to your journey.
         </p>
 
-        <div className="w-full flex flex-col items-center gap-4 mb-6 mt-10">
-          <video
-            className="w-full max-w-[700px] h-[300px] rounded-md shadow-md opacity-90 object-cover"
-            controls
-            src=""
-          ></video>
+<div className="w-full flex justify-center items-center flex-col gap-4 mb-6 mt-10">
+  <div className="relative w-full max-w-[600px] mx-auto">
+    <video
+      className="w-full h-[250px] md:h-[300px] rounded-md shadow-md opacity-90 object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+      src="/video2.mp4.mp4"
+    ></video>
 
-          <a
-            href="#appointment"
-            className="bg-green-800 text-white px-6 py-2 rounded-md shadow"
-          >
-            Book Appointment
-          </a>
-        </div>
+    <a
+      href="#appointment"
+      className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-green-800 text-white text-sm px-3 py-1 rounded shadow"
+    >
+      Book Appointment
+    </a>
+  </div>
+</div>
+
+
+
+
+
 
         <p className="text-gray-800 text-sm md:text-base max-w-xl mx-auto mt-20 text-center">
           At Dare Behavioral Health & Wellness, we provide comprehensive mental health

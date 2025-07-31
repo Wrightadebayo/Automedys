@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Accordiondata } from "../assets/data"; // adjust if needed
+import { Accordiondata } from "../assets/data"; 
 
-const Service = () => {
+const OurServices = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Service = () => {
 
   return (
     <section
-      id="Services"
+     
       className="scroll-mt-20 py-10 px-4 md:px-20 bg-gray-100"
     >
       <div className="max-w-6xl mx-auto">
@@ -72,7 +72,7 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default OurServices;
 
 
 

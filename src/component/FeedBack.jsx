@@ -43,7 +43,7 @@ const FeedBack = () => {
             className="bg-white shadow-md p-4 rounded-lg border border-gray-100 flex flex-col justify-between"
           >
             <div className="space-y-4">
-              <h2 className="font-bold text-gray-800">{item.quote}</h2>
+              <h2 className=" text-gray-600">{item.quote}</h2>
               <p className="text-gray-400 text-xs">{item.comment}</p>
             </div>
 

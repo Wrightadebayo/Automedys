@@ -1,9 +1,13 @@
-import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
-import logoimg from "../assets/logoimg.jpg";
+import { FaInstagram, FaFacebook, FaYoutube, FaArrowUp } from "react-icons/fa";
+import logoimg from "../assets/logoimg.jpg"; // adjust the path
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <div className="bg-black text-white py-10">
+    <div className="relative bg-black rounded text-white py-10">
       <div className="container mx-auto px-4">
         {/* Top: Logo & Appointment Button */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
@@ -24,7 +28,6 @@ const Footer = () => {
 
         {/* Footer Content: 4 Columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Address */}
           <div>
             <h2 className="font-bold mb-2">Address</h2>
             <p className="text-sm text-gray-400">
@@ -32,8 +35,6 @@ const Footer = () => {
               Santa Ana, BS186
             </p>
           </div>
-
-          {/* Services */}
           <div>
             <h2 className="font-bold mb-2">Services</h2>
             <ul className="text-xs text-gray-400 space-y-1">
@@ -49,15 +50,11 @@ const Footer = () => {
               <li>Corporate & School Partnership</li>
             </ul>
           </div>
-
-          {/* Contact Us */}
           <div className="lg:pl-8">
             <h2 className="font-bold mb-2">Contact Us</h2>
             <p className="text-sm text-gray-400">Phone: (555) 123-4567</p>
             <p className="text-sm text-gray-400">info@dareclinic.com</p>
           </div>
-
-          {/* Social Icons */}
           <div className="flex items-start justify-start lg:justify-end">
             <div className="flex gap-4 text-xl">
               <FaInstagram className="hover:text-green-300 cursor-pointer" />
@@ -66,25 +63,22 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* New: Bottom Centered Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <a
-            href="/contact"
-            className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded"
-          >
-            Contact Us
-          </a>
-          <a
-            href="/services"
-            className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded"
-          >
-            Our Services
-          </a>
-        </div>
       </div>
+
+      {/* Arrow Up Button */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-5 right-5 bg-white text-black p-3 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300 z-50"
+        aria-label="Scroll to Top"
+      >
+        <FaArrowUp />
+      </button>
     </div>
   );
 };
 
 export default Footer;
+
+
+
+

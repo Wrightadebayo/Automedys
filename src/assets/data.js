@@ -102,4 +102,59 @@ export const questionData = [
     title:'How can i cancel or reschedule an appointment?',
     response:"To cancel or reschedule please notify us at 24hours before your appointment by calling (123-456-7890 or via the Patient Portal Late cancellations or no-shows may incur a fee."
   },
-]
+]// src/data/serviceData.js
+import wellness1 from '../assets/wellness1.jpg';
+import wellness2 from '../assets/wellness2.jpg';
+import wellness4 from '../assets/wellness4.jpg';
+
+export const servicesData = [
+  {
+    id: 1,
+    title: 'Therapy Services',
+    icon: wellness1,
+  },
+  {
+    id: 2,
+    title: 'Psychiatric Services',
+    icon: wellness2,
+  },
+  {
+    id: 3,
+    title: 'Counseling & Support',
+    icon: wellness4,
+  },
+  // {
+  //   id: 4,
+  //   title: 'Group Therapy',
+  //   icon: wellness1,
+  // },
+];
+
+
+ // Make sure this file is plain JS (no JSX elements)
+export const therapyCards = [
+  {
+    id: 1,
+    iconName: "FaUser",
+    title: "Individual Therapy",
+    text: "One on one sessions tailored to your goals. Providing a safe, confidential space to explore thoughts, feelings, and behaviors.",
+  },
+  {
+    id: 2,
+    iconName: "FaUsers",
+    title: "Couples & Family Therapy",
+    text: "Collaborative sessions focused on improving communication, resolving conflict and strengthening bonds within relationships.",
+  },
+  {
+    id: 3,
+    iconName: "FaUserFriends",
+    title: "Group Therapy",
+    text: "Guided peer groups that foster bonding, shared learning, and mutual encouragement under professional facilitation.",
+  },
+  {
+    id: 4,
+    iconName: "FaChild",
+    title: "Child & Adolescent Therapy",
+    text: "Developmentally appropriate interventions to help young clients navigate emotional, behavioral, and social challenges.",
+  },
+];

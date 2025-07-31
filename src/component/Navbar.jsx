@@ -1,12 +1,18 @@
-import { useState } from 'react';
+
 import logo from '../assets/logoimg.jpg'
-import {GiHamburgerMenu} from 'react-icons/gi'
-import {RiCloseLargeFill} from 'react-icons/ri'
+import { useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { RiCloseLargeFill } from 'react-icons/ri';
+import { NavLink } from 'react-router-dom';
+
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinkClass = 'hover:text-green-600';
+
   return (
-    <nav className=" sticky top-0 bg-white  z-40">
+    <nav className="sticky top-0 bg-white z-40">
       <div className="flex justify-between items-center max-w-[1000px] mx-auto px-4 py-3">
         <div className="flex items-center">
           <img src={logo} className="h-10 w-10" alt="logo" />
@@ -16,13 +22,15 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul className="hidden md:flex space-x-6 text-sm text-gray-600">
-          <li><a href="#Home" className="hover:text-green-600">Home</a></li>
-          <li><a href="#Services" className="hover:text-green-600">Services</a></li>
-          <li><a href="#AboutUs" className="hover:text-green-600">About Us</a></li>
-          <li><a href="#ContactUs" className="hover:text-green-600">Contact Us</a></li>
-        </ul>
+        {/* Desktop Nav */}
+        <div className="hidden md:flex space-x-6 text-sm text-gray-600">
+          <NavLink to="/" className={navLinkClass}>Home</NavLink>
+          <NavLink to="/service" className={navLinkClass}>Service</NavLink>
+          <NavLink to="/about" className={navLinkClass}>About Us</NavLink>
+          <NavLink to="/contact" className={navLinkClass}>Contact Us</NavLink>
+        </div>
 
+        {/* Hamburger Icon */}
         <div
           className="cursor-pointer md:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -31,18 +39,22 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Nav */}
       {isOpen && (
         <ul className="md:hidden flex flex-col items-center space-y-4 py-4 text-sm text-gray-600">
-          <li><a href="#Home" className="hover:text-green-600">Home</a></li>
-          <li><a href="#Service" className="hover:text-green-600">Service</a></li>
-          <li><a href="#AboutUs" className="hover:text-green-600">About Us</a></li>
-          <li><a href="#ContactUs" className="hover:text-green-600">Contact Us</a></li>
+          <li><NavLink to="/" className={navLinkClass} onClick={() => setIsOpen(false)}>Home</NavLink></li>
+          <li><NavLink to="/service" className={navLinkClass} onClick={() => setIsOpen(false)}>Service</NavLink></li>
+          <li><NavLink to="/about" className={navLinkClass} onClick={() => setIsOpen(false)}>About Us</NavLink></li>
+          <li><NavLink to="/contact" className={navLinkClass} onClick={() => setIsOpen(false)}>Contact Us</NavLink></li>
         </ul>
       )}
     </nav>
   );
 };
-export default Navbar
+
+export default Navbar;
+
+
 
 
 
