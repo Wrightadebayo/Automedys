@@ -20,6 +20,7 @@ const Hero = () => {
 
 <div className="w-full flex justify-center items-center flex-col gap-4 mb-6 mt-10">
   <div className="relative w-full max-w-[600px] mx-auto">
+    {/* Video element */}
     <video
       className="w-full h-[250px] md:h-[300px] rounded-md shadow-md opacity-90 object-cover"
       autoPlay
@@ -29,6 +30,10 @@ const Hero = () => {
       src="/video2.mp4.mp4"
     ></video>
 
+    {/* White bottom gradient overlay */}
+    <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent rounded-b-md pointer-events-none"></div>
+
+    {/* Appointment button */}
     <a
       href="#appointment"
       className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-green-800 text-white text-sm px-3 py-1 rounded shadow"
@@ -37,6 +42,8 @@ const Hero = () => {
     </a>
   </div>
 </div>
+
+
 
 
 

@@ -5,12 +5,14 @@ import {  servicesData } from '../assets/data';
 import TherapyService from '../component/TherapyService';
 import ServiceItem from './ServiceItem';
 import WellnessPage from '../component/WellnessPage'
-import Questions from './Questions';
-import FeedBack from './FeedBack';
-import SingleQuestions from './SingleQuestions';
+// import Questions from './Questions';
+// import FeedBack from './FeedBack';
+// import SingleQuestions from './SingleQuestions';
 import FAQ from './FAQ';
 import Contact from './Contact';
 import Footer from './Footer';
+import GetTouchPage from './GetTouchPage';
+
 
 
 const Service = () => {
@@ -58,7 +60,8 @@ const Service = () => {
  <PsychiatricTherapy/>
  <WellnessPage />
  <FAQ/>
- <Contact />
+ 
+ <GetTouchPage />
  <Footer/>
  
       </div>

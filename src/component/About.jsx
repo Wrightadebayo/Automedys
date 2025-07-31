@@ -6,6 +6,8 @@ import old from "../assets/old.jpg";
 import korea from "../assets/korea.jpg";
 import FeedBack from "./FeedBack";
 import Footer from "./Footer";
+import GetTouchPage from "./GetTouchPage";
+
 
 
 const About = () => {
@@ -153,20 +155,15 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/* Feedback Section */}
-        <FeedBack />
       </div>
  {/* Feedback Section */}
 <FeedBack />
-
-{/* Centered Paragraph Below Feedback */}
 <div className="m-15 px-4">
   <h2 className="text-gray-1000 text-center max-w-2xl mx-auto text-base leading-relaxed">
     Whether you're just beginning your mental health journey or seeking to <br/>deepen your wellness practice, our team is here to guide and support<br/> you every step of the way.
   </h2>
 </div>
-
+<GetTouchPage />
       {/* Footer Section */}
       <Footer />
     </div>

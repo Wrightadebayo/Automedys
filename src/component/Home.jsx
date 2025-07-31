@@ -5,8 +5,10 @@ import MeetUs from "./MeetUs";
 import FeedBack from "./FeedBack";
 import FAQ from "./FAQ";
 import Latest from "./Latest";
-import Contact from "./Contact";
 import Footer from "./Footer";
+import GetTouchPage from "./GetTouchPage";
+
+// import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -41,7 +43,7 @@ const Home = () => {
         </section>
 
         <section className="py-6">
-          <Contact />
+          <GetTouchPage/>
         </section>
 
         <section className="py-6">
