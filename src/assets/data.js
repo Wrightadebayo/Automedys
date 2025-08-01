@@ -44,33 +44,33 @@ export const Accordiondata = [
 
 
 export const DataImages = [{
-  image:'./images/therapy1.jpg',
+  image:'./images/bipolar.png',
   title:'Depression and Anxiety',
   description:'Compassionate evidence-based mental health care tailored to your journey'
 },
 
 {
-image:'./images/therapy2.jpg',
+image:'./images/depression.png',
 title:'Bipolar Disorder',
 description:"Specialized care and continuous support to help you manage mood swings and maintain emotional balance" 
 },
 {
-image:'./images/therapy3.jpg',
+image:'./images/bipolar.png',
 title:'PTSD',
 description:"Trauma-informed therapies to help you process past experiences and reclaim a sense of safety and resilience"
 },
 {
-image:'./images/therapy4.jpg',
+image:'./images/maruwa.jpg',
 title:'ADHD',
 description:"Targeted strategies and personalized interventions to enhance focus ,organization and daily performance"
 },
 {
-image:'./images/therapy5.jpg',
+image:'./images/worried.png',
 title:'Eating Disorder',
 description:"Compassionate multidisciplinary support to help rebuild a healthy relationship with food and your body "
 },
 {
-image:'./images/therapy6.jpg',
+image:'./images/maruwa.png',
 title:'Substance Abuse',
 description:"Compassionate evidence-based support to guide you on the path to recovery and lasting wellness."
 }

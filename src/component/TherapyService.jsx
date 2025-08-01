@@ -7,7 +7,7 @@ import {
   FaChild,
   FaCheck,
 } from "react-icons/fa";
-import groupImage from "../assets/grouptherapy.jpg";
+import autoimage from "../assets/autoimg1.png";
 
 const iconMap = {
   FaUser: <FaUser size={20} className="text-black" />,
@@ -44,7 +44,7 @@ const ServiceCards = () => {
        {/* Middle Image with Text Overlays */}
 <div className="relative h-[250px] sm:h-[300px] md:h-auto w-full rounded shadow-md overflow-hidden">
   <img
-    src={groupImage}
+    src={autoimage}
     alt="Therapy"
     className="w-full h-full object-cover"
   />

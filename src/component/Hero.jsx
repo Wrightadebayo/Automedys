@@ -27,11 +27,36 @@ const Hero = () => {
       muted
       loop
       playsInline
-      src="/video2.mp4.mp4"
+      src="/automp.mp4"
     ></video>
 
     {/* White bottom gradient overlay */}
     <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent rounded-b-md pointer-events-none"></div>
+
+    {/* Vertical left side labels */}
+    <div className="absolute top-1/2 left-2 transform -translate-y-1/2 flex flex-col gap-2">
+      <p className="bg-stone-400 text-black mb-1 text-xs  px-2 py-1 rounded-xl">
+        02 TELEHEALTH SERVICES
+      </p>
+      <p className="bg-gray-500 text-black mt-1 text-xs  px-2 py-1 rounded-xl ml-15">
+        03 PSYCHIATRIC SERVICES
+      </p>
+    </div>
+
+    {/* Right side single horizontal label */}
+    <div className="absolute top-1/2 right-2 transform -translate-y-1/2">
+      <p className="bg-green-300 text-black text-xs  px-2 py-1 rounded-xl">
+        01 GROUP THERAPY
+      </p>
+    </div>
+
+    {/* Center overlay text without black background */}
+    <div className="absolute bottom-14 left-1/2 transform -translate-x-1/2 text-center text-white px-2 text-sm md:text-base  ">
+      <p>
+        Peer-led sessions to share experiences and build 
+        collective resilience together.
+      </p>
+    </div>
 
     {/* Appointment button */}
     <a
@@ -42,6 +67,7 @@ const Hero = () => {
     </a>
   </div>
 </div>
+
 
 
 

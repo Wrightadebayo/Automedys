@@ -13,7 +13,7 @@ import GetTouchPage from "./GetTouchPage";
 const Home = () => {
   return (
     <div className="w-full bg-white">
-      <div className="max-w-[1000px] w-full mx-auto px-4 sm:px-6 md:px-8">
+      <div className="max-w-[1100px] w-full mx-auto px-4 sm:px-6 md:px-8">
         <section className="py-6">
           <Hero />
         </section>

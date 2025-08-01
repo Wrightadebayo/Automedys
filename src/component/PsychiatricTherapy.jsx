@@ -1,8 +1,12 @@
 import { FaCheck } from "react-icons/fa";
-import doctor from "../assets/doctor2.jpg";
+import autoimage from "../assets/autoimage2.png";
 import Wellness1 from "../assets/wellness1.jpg";
 import wellness2 from "../assets/wellness4.jpg";
 import wellness3 from "../assets/wellness3.jpg";
+
+
+
+
 
 const PsychiatricTherapy = () => {
   const cardData = [
@@ -34,7 +38,7 @@ const PsychiatricTherapy = () => {
 
   return (
     <section className="bg-white px-4 md:px-12 pt-16 pb-10">
-      <h2 className="text-2xl md:text-3xl font semi-bold mb-10 text-gray-800 text-center">
+      <h2 className="text-2xl md:text-3xl font -bold mb-10 text-gray-1000 text-center">
         Psychiatric Services
       </h2>
 
@@ -42,7 +46,7 @@ const PsychiatricTherapy = () => {
         {/* Left: Image Block */}
         <div className="relative rounded-md shadow-md overflow-hidden h-[500px] w-full">
           <img
-            src={doctor}
+            src={autoimage}
             alt="Psychiatric Services"
             className="w-full h-full object-cover"
           />
@@ -86,3 +90,9 @@ const PsychiatricTherapy = () => {
 };
 
 export default PsychiatricTherapy;
+// hugeicons:brain-02
+// carbon:medication
+// ph:brain
+// hugeicons:service
+// material-symbols:physical-therapy-outline
+// bx:leaf

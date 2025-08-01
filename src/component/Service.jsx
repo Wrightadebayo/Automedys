@@ -5,9 +5,7 @@ import {  servicesData } from '../assets/data';
 import TherapyService from '../component/TherapyService';
 import ServiceItem from './ServiceItem';
 import WellnessPage from '../component/WellnessPage'
-// import Questions from './Questions';
-// import FeedBack from './FeedBack';
-// import SingleQuestions from './SingleQuestions';
+
 import FAQ from './FAQ';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -52,7 +50,7 @@ const Service = () => {
   muted
   playsInline
 >
-  <source src="/doctors screet.mp4" type="video/mp4" />
+  <source src="/autovideo1.mp4" type="video/mp4" />
   </video>
 </div>
        </div>

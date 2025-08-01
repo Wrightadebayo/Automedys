@@ -1,8 +1,8 @@
 import { FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import homeimage from "../assets/homeimage.jpeg";
-import home1 from "../assets/home1.jpeg";
-import feelingimg from "../assets/feeling.jpg";
+import autoimage6 from "../assets/autoimage6.png";
+import autoimage7 from "../assets/autoimage7.png";
+import autoimage8 from "../assets/autoimage8.png";
 
 const LocationPage = () => {
   return (
@@ -42,7 +42,7 @@ const LocationPage = () => {
 
         <div className="w-full md:w-[450px]">
           <img
-            src={homeimage}
+            src={autoimage6}
             alt="Main Clinic"
             className="w-full h-72 object-cover rounded-md shadow-md"
           />
@@ -79,7 +79,7 @@ const LocationPage = () => {
 
         <div className="w-full md:w-[450px]">
           <img
-            src={home1}
+            src={autoimage7}
             alt="Satellite Office"
             className="w-full h-72 object-cover rounded-md shadow-md"
           />
@@ -89,7 +89,7 @@ const LocationPage = () => {
       {/* Telehealth Services Image with Text Overlay */}
       <div className="relative w-full h-[400px] mt-20">
         <img
-          src={feelingimg}
+          src={autoimage8}
           alt="Telehealth"
           className="w-full h-full object-cover rounded-md shadow-md"
         />

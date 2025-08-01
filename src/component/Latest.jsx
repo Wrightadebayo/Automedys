@@ -1,7 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
-import therapist from "../assets/therapist20.jpg"; 
-import grouptherpy from '../assets/grouptherapy.jpg'
-import healthmatter from '../assets/healthmatters.jpg'
+import tasha from "../assets/tasha.png"; 
+import tania from '../assets/tania.png'
+import vector from '../assets/vector.png'
 
 const Latest = () => {
   return (
@@ -17,20 +17,38 @@ const Latest = () => {
         </div>
 
         {/* Main Image */}
-        <div className="mb-6">
-          <img
-            src={therapist}
-            alt="Therapist discussing anxiety"
-            className="w-full h-62 object-cover rounded"
-          />
-        </div>
+<div className="flex flex-col md:flex-row bg-black text-white rounded overflow-hidden mb-6">
+  {/* Image Left */}
+  <div className="w-full md:w-1/2">
+    <img
+      src={tasha}
+      alt="Therapist discussing anxiety"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+  {/* Text Right */}
+  <div className="w-full md:w-1/2 p-6 flex flex-col justify-start mb-auto">
+    <h1 className="text-2xl font-semibold mb-2">
+      Understanding Anxiety in the Modern World
+    </h1>
+    <p className="mb-4 text-sm">
+      Explore the causes and effective treatments for anxiety disorders in today's fast-paced society.
+    </p>
+    <div className="flex items-center gap-2 text-white font-medium cursor-pointer">
+      <p>Learn more</p>
+      <FaArrowRight />
+    </div>
+  </div>
+</div>
+
 
         {/* Articles */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* First Column */}
           <div>
             <img
-              src={grouptherpy}
+              src={tania}
               alt="Group therapy session"
               className="w-full h-68 object-cover rounded"
             />
@@ -40,16 +58,17 @@ const Latest = () => {
             <p className="text-sm text-gray-600 mt-1">
               Discover how group therapy can uncover unique healing opportunities and peer support.
             </p>
-            <div className="flex items-center text-sm mt-2 cursor-pointer">
-              <span>Learn more</span>
-              <FaArrowRight className="ml-1 mt-1 text-gray-95" />
-            </div>
+            <div className="flex items-center text-black text-sm mt-2 cursor-pointer">
+  <span>Learn more</span>
+  <FaArrowRight className="ml-1 text-black" />
+</div>
+
           </div>
 
           {/* Second Column */}
           <div>
             <img
-              src={healthmatter}
+              src={vector}
               alt="Mental health self care"
               className="w-full h-68 object-cover rounded"
             />

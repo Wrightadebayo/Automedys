@@ -1,5 +1,5 @@
 import { FaInstagram, FaFacebook, FaYoutube, FaArrowUp } from "react-icons/fa";
-import logoimg from "../assets/logoimg.jpg"; // adjust the path
+import behalogo from "../assets/behalogo.png"; // adjust the path
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -13,9 +13,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
           <div className="flex items-center gap-4">
             <img
-              src={logoimg}
+              src={behalogo}
               alt="Logo"
-              className="w-10 h-10 rounded object-contain"
+              className="w-8 h-8 rounded object-contain"
             />
             <h2 className="text-sm leading-tight">
               Dare Behavioral <br /> Health Wellness
@@ -68,7 +68,7 @@ const Footer = () => {
       {/* Arrow Up Button */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-5 right-5 bg-white text-black p-3 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300 z-50"
+        className="fixed bottom-5 right-5 bg-white text-black p-3 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300 z-50 mr-25"
         aria-label="Scroll to Top"
       >
         <FaArrowUp />

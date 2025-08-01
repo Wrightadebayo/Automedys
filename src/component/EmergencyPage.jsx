@@ -41,6 +41,10 @@ const EmergencyPage = () => {
             </span>
           </div>
         </div>
+        <div >
+      <p>We look forward to connecting with you and supporting your <br/>journey to wellness.</p>
+    </div>
+        
       </div>
     </section>
   );

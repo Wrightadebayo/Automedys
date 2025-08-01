@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import happy from '../assets/happy.jpg';
-import happy1 from '../assets/happy3.jpg';
+import autoimage from '../assets/autoimage3.png';
 import happy3 from '../assets/happy1.jpg';
 
 const images = [
@@ -11,7 +11,7 @@ const images = [
       'Workshops and guided practices that cultivate present-moment awareness, resilience, and effective stress-reduction techniques.',
   },
   {
-    src: happy1,
+    src: autoimage,
     text: 'Workshop and Support Groups',
     subtext:
       'Educational and peer-led sessions covering topics like anxiety management, depression coping strategies, and life-skills development.',

@@ -4,7 +4,7 @@ import { Home, Service, About, Contact, Layout } from './component';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />, // Navbar will be shared across these routes
+    element: <Layout />,
     children: [
       { path: '/', element: <Home /> },
       { path: '/service', element: <Service /> },

@@ -1,4 +1,5 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+
 
 const GetTouchPage = () => {
   return (
@@ -23,14 +24,16 @@ const GetTouchPage = () => {
 
      {/* Buttons */}
        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <button className="bg-green-800 text-white py-2 px-6 rounded-lg shadow-md hover:bg-green-700 transition">
-           Contact Us
-         </button>
-        <button className="border border-black text-gray-600 py-2 px-6 rounded-lg shadow-md hover:bg-gray-100 transition">
-          View Locations
-        </button>
-      
-       </div>
+  <Link
+    to="/contact"
+    className="bg-green-800 text-white py-2 px-6 rounded-lg shadow-md hover:bg-green-700 transition text-center"
+  >
+    Contact Us
+  </Link>
+  <button className="border border-black text-gray-600 py-2 px-6 rounded-lg shadow-md hover:bg-gray-100 transition">
+    View Locations
+  </button>
+</div>
      </div>
     </div>
   )

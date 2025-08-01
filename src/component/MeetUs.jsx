@@ -1,5 +1,5 @@
 
-import img from '../assets/bosslady.jpg';
+import misterss from '../assets/mistress.png';
 
 const MeetUs = () => {
   return (
@@ -31,7 +31,7 @@ const MeetUs = () => {
           {/* Image Section */}
           <div className="flex justify-center md:justify-end">
             <img
-              src={img}
+              src={misterss}
               alt="Dr. Amina Yusuf"
               className="w-full max-w-sm rounded-md object-cover h-72"
             />
