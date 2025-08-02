@@ -1,18 +1,20 @@
 import { FaPhoneAlt, FaEnvelope, FaChevronDown } from "react-icons/fa";
 
+
+
 const Formpage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-16">
-      {/* Section Container with Fixed Width */}
-      <div className="w-[1000px] mx-auto bg-white rounded-lg shadow-md p-6">
-        <div className="flex gap-8 h-full">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-16 px-4">
+      {/* Responsive Container */}
+      <div className="w-full max-w-6xl bg-white rounded-lg shadow-md p-6">
+        <div className="flex flex-col md:flex-row gap-8">
           {/* Left Column */}
           <div className="flex-1 flex flex-col justify-between">
             <div>
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
-              <p className="text-gray-600 text-sm mb-8">
-                Whether you're ready to schedule an appointment <br/> or have a question,
-                we're here to help.<br/> Please choose the method that works best for you.
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+              <p className="text-gray-600 text-sm mb-8 leading-relaxed">
+                Whether you're ready to schedule an appointment <br /> or have a question,
+                we're here to help.<br /> Please choose the method that works best for you.
               </p>
 
               <div className="flex flex-col gap-6 text-gray-700">
@@ -41,7 +43,7 @@ const Formpage = () => {
 
           {/* Right Column - Contact Form */}
           <form className="flex-1 flex flex-col justify-between">
-            <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <input
                 type="text"
                 placeholder="First Name"
@@ -101,9 +103,10 @@ const Formpage = () => {
             </button>
           </form>
         </div>
-        
       </div>
     </div>
   );
 };
-export default Formpage
+
+export default Formpage;
+

@@ -60,7 +60,7 @@ title:'PTSD',
 description:"Trauma-informed therapies to help you process past experiences and reclaim a sense of safety and resilience"
 },
 {
-image:'./images/maruwa.jpg',
+image:'./images/maruwa.png',
 title:'ADHD',
 description:"Targeted strategies and personalized interventions to enhance focus ,organization and daily performance"
 },
@@ -123,11 +123,7 @@ export const servicesData = [
     title: 'Counseling & Support',
     icon: wellness4,
   },
-  // {
-  //   id: 4,
-  //   title: 'Group Therapy',
-  //   icon: wellness1,
-  // },
+  
 ];
 
 
@@ -158,3 +154,54 @@ export const therapyCards = [
     text: "Developmentally appropriate interventions to help young clients navigate emotional, behavioral, and social challenges.",
   },
 ];
+
+
+export const feedbacks = [
+    {
+      name: "Ashley M",
+      quote: "I've never felt more seen and supported.",
+      comment: "After struggling for years to find the right therapist, I finally found a place that truly listens. Dare changed my life.",
+    },
+    {
+      name: "Devron T",
+      quote: "The staff is warm, professional, and genuinely caring.",
+      comment: "From the first phone call to my therapy sessions, I've felt nothing but compassion. They make mental health accessible and welcoming.",
+    },
+    {
+      name: "Rachel B.",
+      quote: "Telehealth made it easy for me to get help during tough times.",
+      comment: "I was hesitant at first, but virtual care is seamless. My provider helped me manage my anxiety with patience and expertise.",
+    },
+    {
+      name: "Kevin L",
+      quote: "The wellness workshops helped me reconnect with myself.",
+      comment: "I attended a mindfulness group and left feeling lighter, calmer, and more hopeful. Highly recommend their holistic approach.",
+    },
+    {
+      name: "Jamila R",
+      quote: "They really care about the whole person.",
+      comment: "I worked with both a therapist and nutrition coach at Dare. The integrated care helped me regain balance emotionally and physically.",
+    },
+  ];
+
+ export const videoData = [
+  {
+    src: "/automp.mp4",
+    label: "01 GROUP THERAPY",
+    paragraph:
+      "Peer-led sessions share experiences\nbuild collective resilience together.",
+  },
+  {
+    src: "/video1.mp4",
+    label: "02 TELEHEALTH SERVICES",
+    paragraph:
+      "Convenient video sessions connecting you with\n expert mental health care from anywhere.",
+  },
+  {
+    src: "/video2.mp4",
+    label: "03 PSYCHIATRIC SERVICES",
+    paragraph:
+      "Assessments and  medication management\nfor balanced mood,mental health."
+  },
+];
+

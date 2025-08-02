@@ -7,7 +7,7 @@ import LocationPage from "./LocationPage";
 
 const Contact = () => {
   return (
-    <div className='max-w-[1100px]'>
+    <div className='max-w-[1100px mx-auto]'>
     <Formpage />
     <LocationPage />
     <EmergencyPage/>

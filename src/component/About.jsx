@@ -37,13 +37,13 @@ const About = () => {
   <div className="absolute bottom-20 left-4 bg-white text-black px-3 py-1 rounded mb-6 shadow-md rotate-[-7deg] text-xs font-semibold">
     Respect & Dignity
   </div>
-  <div className="absolute bottom-8 left-6 bg-white text-black px-3 py-1 rounded shadow-md mr-5 mb-3 rotate-[5deg] text-xs font-semibold">
+  <div className="absolute bottom-8 left-6 bg-white text-black px-3 py-1 rounded shadow-md mr-1 mb-3 rotate-[1deg] text-xs font-semibold">
     Collaboration & Partnership
   </div>
   <div className="absolute bottom-20 right-4 bg-white text-black px-3 py-1 rounded shadow-md mb-5 rotate-[7deg] text-xs font-semibold">
     Integrity & Excellence
   </div>
-  <div className="absolute bottom-8 right-6 bg-white text-black px-3 py-1 rounded mt-4 ml-3 shadow-md rotate-[-5deg] text-xs font-semibold">
+  <div className="absolute bottom-8 right-6 bg-white text-black px-3 py-1 rounded mt-4 ml-2 shadow-md rotate-[-13deg] text-xs font-semibold">
     Inclusivity & Accessibility
   </div>
 </div>

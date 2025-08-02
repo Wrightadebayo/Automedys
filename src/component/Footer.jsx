@@ -1,5 +1,5 @@
 import { FaInstagram, FaFacebook, FaYoutube, FaArrowUp } from "react-icons/fa";
-import behalogo from "../assets/behalogo.png"; // adjust the path
+import behalogo from "../assets/behalogo.png"; // adjust this import as needed
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -65,10 +65,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Arrow Up Button */}
+      {/* Arrow Up Button - Always at right edge */}
       <button
         onClick={scrollToTop}
-        className="fixed bottom-5 right-5 bg-white text-black p-3 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300 z-50 mr-25"
+        className="fixed bottom-5 right-4 sm:right-6 md:right-8 lg:right-10 bg-white text-black p-3 rounded-full shadow-md hover:bg-gray-200 transition-all duration-300 z-50"
         aria-label="Scroll to Top"
       >
         <FaArrowUp />
@@ -78,6 +78,8 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
 
 
 
