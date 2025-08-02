@@ -15,7 +15,7 @@ import GetTouchPage from './GetTouchPage';
 
 const Service = () => {
   return (
-    <div className="max-w-[1100px] mx-auto px-4 py-12 bg-gray-100">
+    <div className="max-w-[3840px] mx-auto px-4 py-12 bg-gray-100">
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12">
         {/* Left Column */}
         <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">

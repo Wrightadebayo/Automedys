@@ -13,8 +13,9 @@ import GetTouchPage from "./GetTouchPage";
 const Home = () => {
   return (
     <div className="w-full bg-white">
-      <div className="max-w-[1100px] w-full mx-auto px-4 sm:px-6 md:px-8">
-        <section className="py-6">
+      {/* Main content container */}
+      <div className="max-w-[3840px] w-full mx-auto px-4 sm:px-6 md:px-8">
+        <section className="py-6 min-h-screen">
           <Hero />
         </section>
 
@@ -43,17 +44,21 @@ const Home = () => {
         </section>
 
         <section className="py-6">
-          <GetTouchPage/>
-        </section>
-
-        <section className="py-6">
-          <Footer />
+          <GetTouchPage />
         </section>
       </div>
+
+      {/* Footer outside the max-width container for full width */}
+      <section className="py-6">
+        <Footer />
+      </section>
     </div>
   );
 };
 
 export default Home;
+
+
+
 
 

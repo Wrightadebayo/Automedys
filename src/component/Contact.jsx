@@ -7,15 +7,32 @@ import LocationPage from "./LocationPage";
 
 const Contact = () => {
   return (
-    <div className='max-w-[1100px mx-auto]'>
-    <Formpage />
-    <LocationPage />
-    <EmergencyPage/>
-    {/* <Text/> */}
-  <Footer />
-  </div>
+    <div className="w-full bg-white">
+      <div className="max-w-[3840px] w-full mx-auto px-4 sm:px-6 md:px-8 py-10">
+        <section className="py-6">
+          <Formpage />
+        </section>
+
+        <section className="py-6">
+          <LocationPage />
+        </section>
+
+        <section className="py-6">
+          <EmergencyPage />
+        </section>
+
+        {/* <section className="py-6">
+          <Text />
+        </section> */}
+
+        <section className="py-6">
+          <Footer />
+        </section>
+      </div>
+    </div>
   );
 };
 
 export default Contact;
+
 
