@@ -14,7 +14,7 @@ import GetTouchPage from "./GetTouchPage";
 const About = () => {
   return (
     <div className="w-full px-4 py-10 md:py-16 bg-gray-100">
-      <div className="w-full max-w-[3840px] mx-auto px-4">
+      <div className="w-full max-w-[4000px] mx-auto px-4">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center mb-4">
           Trusted Help For <br className="hidden sm:block" />
@@ -35,13 +35,13 @@ const About = () => {
             <div className="absolute bottom-20 left-4 bg-white text-black px-3 py-1 rounded mb-6 shadow-md rotate-[-7deg] text-xs font-semibold">
               Respect & Dignity
             </div>
-            <div className="absolute bottom-8 left-6 bg-white text-black px-3 py-1 rounded shadow-md mr-1 mb-3 rotate-[1deg] text-xs font-semibold">
+            <div className="absolute bottom-8 left-6 bg-white text-black px-3 py-1 rounded shadow-md mr-2 mb-5 rotate-[2deg] text-xs font-semibold">
               Collaboration & Partnership
             </div>
-            <div className="absolute bottom-20 right-4 bg-white text-black px-3 py-1 rounded shadow-md mb-5 rotate-[7deg] text-xs font-semibold">
+            <div className="absolute bottom-20 right-4 bg-white text-black px-3 py-1 rounded shadow-md mb-5 rotate-[7deg] text-xs font-semibold mr-3">
               Integrity & Excellence
             </div>
-            <div className="absolute bottom-8 right-6 bg-white text-black px-3 py-1 rounded mt-4 ml-2 shadow-md rotate-[-13deg] text-xs font-semibold">
+            <div className="absolute bottom-8 right-6 bg-white text-black px-3 py-1 rounded mt-6 ml-1 shadow-md rotate-[-17deg] text-xs font-semibold">
               Inclusivity & Accessibility
             </div>
           </div>

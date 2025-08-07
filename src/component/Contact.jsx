@@ -8,7 +8,7 @@ import LocationPage from "./LocationPage";
 const Contact = () => {
   return (
     <div className="w-full bg-white">
-      <div className="max-w-[3840px] w-full mx-auto px-4 sm:px-6 md:px-8 py-10">
+      <div className="max-w-[4000px] w-full mx-auto px-4 sm:px-6 md:px-8 py-10">
         <section className="py-6">
           <Formpage />
         </section>

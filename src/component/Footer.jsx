@@ -1,5 +1,6 @@
 import { FaInstagram, FaFacebook, FaYoutube, FaArrowUp } from "react-icons/fa";
 import behalogo from "../assets/behalogo.png"; // adjust this import as needed
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -11,16 +12,20 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         {/* Top: Logo & Appointment Button */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
-          <div className="flex items-center gap-4">
-            <img
-              src={behalogo}
-              alt="Logo"
-              className="w-8 h-8 rounded object-contain"
-            />
-            <h2 className="text-sm leading-tight">
-              Dare Behavioral <br /> Health Wellness
-            </h2>
-          </div>
+         
+<div className="flex items-center gap-4">
+  <Link to="/" className="flex items-center gap-4 hover:opacity-80 transition">
+    <img
+      src={behalogo}
+      alt="Logo"
+      className="w-8 h-8 rounded object-contain"
+    />
+    <h2 className="text-sm leading-tight">
+      Dare Behavioral <br /> Health Wellness
+    </h2>
+  </Link>
+</div>
+
           <button className="bg-green-300 text-black text-sm py-2 px-4 rounded">
             Book an appointment
           </button>
@@ -31,8 +36,9 @@ const Footer = () => {
           <div>
             <h2 className="font-bold mb-2">Address</h2>
             <p className="text-sm text-gray-400">
-              2927 Westheimer Rd <br />
-              Santa Ana, BS186
+              2927 Westheimer Rd. <br />
+              Santa Ana.
+              Illinois 85486
             </p>
           </div>
           <div>

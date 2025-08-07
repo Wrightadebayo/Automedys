@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className="w-full bg-white">
       {/* Main content container */}
-      <div className="max-w-[3840px] w-full mx-auto px-4 sm:px-6 md:px-8">
+      <div className="max-w-[4000px] w-full mx-auto px-4 sm:px-6 md:px-8">
         <section className="py-6 min-h-screen">
           <Hero />
         </section>

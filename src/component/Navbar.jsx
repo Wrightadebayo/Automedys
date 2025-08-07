@@ -1,10 +1,8 @@
-
-import behalogo from '../assets/behalogo.png'
+import behalogo from '../assets/behalogo.png';
 import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiCloseLargeFill } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,14 +11,15 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 bg-white z-40">
-      <div className="flex justify-between items-center max-w-[1000px] mx-auto px-4 py-3">
-        <div className="flex items-center">
+      <div className="flex justify-between items-center max-w-[4000px] mx-auto px-4 py-3">
+        {/* Logo wrapped with NavLink */}
+        <NavLink to="/" className="flex items-center">
           <img src={behalogo} className="h-7 w-8 mb-2" alt="logo" />
           <div className="ml-2 leading-tight">
             <h2 className="text-sm text-gray-600">Dare Behavioral</h2>
             <span className="text-xs text-gray-600">Health and Wellness</span>
           </div>
-        </div>
+        </NavLink>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-6 text-sm text-gray-600">
