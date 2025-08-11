@@ -3,12 +3,13 @@ import misterss from '../assets/mistress.png';
 
 const MeetUs = () => {
   return (
-    <section className="py-10 px-4">
-      <div className="max-w-[1000px] mx-auto">
+    <section className="py-10 px-4 font-urbanist">
+      <div className="max-w-[1096px] mx-auto">
         <div className="text-center mb-10">
-          <h1 className="font-bold md:text-3xl text-2xl text-gray-900">
-            Meet Our Team
-          </h1>
+          <h1 className="font-urbanist font-medium md:text-3xl text-2xl" style={{ color: "#2A2A2E" }}>
+  Meet Our Team
+</h1>
+
         </div>
 
         <div className="grid md:grid-cols-2 gap-10 items-center justify-center">
@@ -18,14 +19,16 @@ const MeetUs = () => {
               Dr. Amina Yusuf, PhD,<br />
               Clinical Director
             </h2>
-            <p className="text-gray-400 text-xs">
-              Clinical Director | Licensed Professional Counselor - Supervisor
-            </p>
-            <h3 className="text-gray-600 text-sm leading-relaxed">
-              Dr. Amina brings over 15 years of clinical experience working with adolescents and adults.
-              She is passionate about trauma recovery and guides the clinic's clinical vision with
-              compassion and accountability.
-            </h3>
+<p className="font-urbanist italic font-medium text-[#707A75] text-xs">
+  Clinical Director | Licensed Professional Counselor - Supervisor
+</p>
+
+            <h3 className="font-urbanist font-normal text-[#2A2A2E] text-sm leading-relaxed">
+  Dr. Amina brings over 15 years of clinical experience working with adolescents and adults.
+  She is passionate about trauma recovery and guides the clinic's clinical vision with
+  compassion and accountability.
+</h3>
+
           </div>
 
           {/* Image Section */}

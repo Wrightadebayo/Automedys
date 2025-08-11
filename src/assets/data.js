@@ -44,7 +44,7 @@ export const Accordiondata = [
 
 
 export const DataImages = [{
-  image:'./images/bipolar.png',
+  image:'./images/thintimer01.png',
   title:'Depression and Anxiety',
   description:'Compassionate evidence-based mental health care tailored to your journey'
 },
@@ -60,7 +60,7 @@ title:'PTSD',
 description:"Trauma-informed therapies to help you process past experiences and reclaim a sense of safety and resilience"
 },
 {
-image:'./images/maruwa.png',
+image:'./images/thinktimer04.png',
 title:'ADHD',
 description:"Targeted strategies and personalized interventions to enhance focus ,organization and daily performance"
 },
@@ -80,7 +80,7 @@ export const questionData = [
   {
     id:1,
     title:'Do i need a referral to schedule an appointment?',
-    response:"No,Dare Behavioral Health & Wellness Clinic welcomes self-referrals. You can book an appointment directly through our website or by calling our office. No physician referral is required. "
+    response:"No, Dare Behavioral Health & Wellness Clinic welcomes self-referrals. You can book an appointment directly through our website or by calling our office. No physician referral is required. "
   },
   {
     id:2,

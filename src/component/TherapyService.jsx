@@ -23,7 +23,7 @@ const ServiceCards = () => {
         Therapy Services
       </h2>
 
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Left Cards */}
         <div className="flex flex-col justify-between h-[300px] space-y-3">
           {therapyCards.slice(0, 2).map((card) => (

@@ -6,12 +6,13 @@ const FAQ = () => {
   const [questions] = useState(questionData);
 
   return (
-    <div className="bg-white px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-10">
+    <div className="bg-white px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20 py-10 max-w-[1320px] mx-auto">
       <Questions questionData={questions} />
     </div>
   );
 };
 
 export default FAQ;
+
 
 

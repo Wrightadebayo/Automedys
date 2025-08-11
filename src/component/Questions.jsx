@@ -2,11 +2,12 @@ import SingleQuestions from "./SingleQuestions";
 
 const Questions = ({ questionData }) => {
   return (
-    <section className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section className="max-w-7xl mx-auto font-urbanist">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+        
         {/* Left Column: Heading */}
-        <div className="md:col-span-1">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl  text-gray-800">
+        <div className="flex justify-center md:justify-start">
+          <h2 className="font-urbanist font-medium text-2xl sm:text-3xl lg:text-4xl text-[#2A2A2E] text-center md:text-left max-w-[426px]">
             Frequently Asked
             <br className="hidden md:block" />
             Questions
@@ -14,7 +15,7 @@ const Questions = ({ questionData }) => {
         </div>
 
         {/* Right Column: Accordion */}
-        <div className="md:col-span-2 space-y-4">
+        <div className="space-y-4 flex flex-col items-center md:items-start w-full">
           {questionData?.map((question) => (
             <SingleQuestions key={question.id} {...question} />
           ))}
@@ -25,4 +26,3 @@ const Questions = ({ questionData }) => {
 };
 
 export default Questions;
-
