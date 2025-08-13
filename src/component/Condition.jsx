@@ -10,15 +10,40 @@ const Condition = () => {
       <div className="max-w-6xl mx-auto">
         
         {/* Section Heading */}
-        <h2 className="text-center text-2xl md:text-3xl font-urbanist font-medium text-[#2A2A2E] mb-4">
-          Conditions We Treat
-        </h2>
+       <h2
+  className="
+    text-center font-urbanist font-medium text-[#2A2A2E] mb-4
+    text-2xl sm:text-3xl lg:text-[48px]
+    leading-[32px] sm:leading-[40px] lg:leading-[58px]
+  "
+  style={{ letterSpacing: "0%" }}
+>
+  Conditions We Treat
+</h2>
+
 
         {/* Section Description */}
-        <p className="text-center md:text-base font-urbanist font-medium text-[#707A75] mb-8 max-w-2xl mx-auto">
-          Personalized evidence-based support designed to address <br />
-          your unique mental health needs
-        </p>
+<p
+  className="
+    text-center 
+    font-urbanist font-medium 
+    text-[#707A75] 
+    mb-8 
+    max-w-2xl 
+    mx-auto 
+    px-4
+  "
+  style={{
+    fontSize: "20px",
+    lineHeight: "30px",
+    letterSpacing: "0%",
+  }}
+>
+  Personalized evidence-based support designed to address <br />
+  your unique mental health needs
+</p>
+
+
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

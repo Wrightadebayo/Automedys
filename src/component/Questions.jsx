@@ -7,19 +7,44 @@ const Questions = ({ questionData }) => {
         
         {/* Left Column: Heading */}
         <div className="flex justify-center md:justify-start">
-          <h2 className="font-urbanist font-medium text-2xl sm:text-3xl lg:text-4xl text-[#2A2A2E] text-center md:text-left max-w-[426px]">
-            Frequently Asked
-            <br className="hidden md:block" />
-            Questions
-          </h2>
+          <h2
+  className="
+    font-urbanist font-medium
+    text-[#2A2A2E]
+    text-[48px]
+    leading-[58px]
+    tracking-[0]
+    text-center md:text-left
+    max-w-[426px]
+  "
+>
+  Frequently Asked
+  <br className="hidden md:block" />
+  Questions
+</h2>
+
         </div>
 
         {/* Right Column: Accordion */}
-        <div className="space-y-4 flex flex-col items-center md:items-start w-full">
-          {questionData?.map((question) => (
-            <SingleQuestions key={question.id} {...question} />
-          ))}
-        </div>
+        <div
+  className="
+    space-y-4
+    flex flex-col
+    items-center md:items-start
+    w-full
+    font-urbanist font-semibold
+    text-[#2A2A2E]
+    text-[18px]
+    leading-[26px]
+    tracking-[0]
+    max-w-full md:max-w-[800px]
+  "
+>
+  {questionData?.map((question) => (
+    <SingleQuestions key={question.id} {...question} />
+  ))}
+</div>
+
       </div>
     </section>
   );

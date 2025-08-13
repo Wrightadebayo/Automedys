@@ -201,7 +201,7 @@ export const feedbacks = [
     src: "/video2.mp4",
     label: "03 PSYCHIATRIC SERVICES",
     paragraph:
-      "Assessments and  medication management\nfor balanced mood,mental health."
+      "Assessments and  medication management for balanced mood, mental health."
   },
 ];
 
