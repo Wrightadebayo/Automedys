@@ -74,7 +74,7 @@ const Hero = () => {
             font-urbanist font-medium text-[#2A2A2E] text-center
             leading-[38px] sm:leading-[48px] md:leading-[60px] lg:leading-[86px]
             text-3xl sm:text-4xl md:text-5xl lg:text-[72px]
-            max-w-full sm:max-w-[700px] md:max-w-[900px] lg:max-w-[985px]
+            max-w-full sm:max-w-[700px] md:max-w-[900px] lg:max-w-[955px]
           "
         >
           Welcome to DARE Behavioral <br />
@@ -82,20 +82,28 @@ const Hero = () => {
         </h1>
 
         {/* Subheading / Tagline */}
-        <p
-          className="
-            font-urbanist font-medium text-[#58595C] text-center
-            mt-6 px-4 sm:px-0
-            text-[16px] sm:text-[18px] md:text-[20px]
-            leading-[24px] sm:leading-[28px] md:leading-[30px]
-            max-w-full sm:max-w-[300px] md:max-w-[500px]
-          "
-        >
-          Compassionate, evidence-based mental health care tailored to your journey.
-        </p>
+    <p
+  className="
+    font-urbanist font-medium text-[#58595C] text-center
+    mt-6 px-4 pb-10
+    text-[16px] sm:text-[18px] md:text-[20px]
+    leading-[24px] sm:leading-[28px] md:leading-[30px]
+    max-w-full  /* ensure it doesn't overflow */
+    mx-auto
+    break-words  /* wrap long text */
+  "
+>
+  <span className="block">
+    Compassionate, evidence-based mental health care tailored to
+  </span>
+  <span className="block">
+    your journey.
+  </span>
+</p>
+
 
         {/* Video Section */}
-        <div className="w-full flex flex-col items-center gap-6 mt-6 mb-12 px-2 sm:px-4 md:px-0 relative">
+        <div className="w-full flex flex-col items-center gap-6 mt-6 mb-12 px-2 sm:px-4 md:px-0  relative">
           <div
             className="
               relative rounded-lg overflow-hidden shadow-md transition-all duration-1000 
@@ -118,98 +126,117 @@ const Hero = () => {
 <div
   className="
     absolute bottom-16 left-1/2 -translate-x-1/2 z-20
-    max-w-[90%] sm:max-w-[600px] px-4 font-urbanist text-center text-white
+    max-w-[90%] sm:max-w-[600px] px-4
+    font-urbanist text-center text-white
     break-words whitespace-normal
-    overflow-hidden
-    lg:max-h-[calc(38px*2)] /* clamp to 2 lines on large screens */
   "
   style={{
-    whiteSpace: "normal",
+    fontFamily: "Urbanist",
+    fontWeight: 500,
+    fontStyle: "medium",
+    textAlign: "center",
+    fontSize:"28px",
+    textShadow: "0px 1px 3px rgba(0,0,0,0.6)", // readability over video
     overflowWrap: "break-word",
-    wordBreak: "normal", // prevents splitting words
-    textShadow: "0px 1px 3px rgba(0,0,0,0.6)", // text readability over video
+    wordBreak: "break-word",
   }}
 >
   <p
     className="
-      text-base font-medium font-urbanist text-white
-      sm:text-lg
-      md:text-[25px] md:leading-[33px]
-      lg:text-[22px] lg:leading-[38px]
+      m-0
+      text-base sm:text-lg
+      md:text-[25px] lg:text-[22px]
+      leading-[1.4] sm:leading-[1.2] md:leading-[38px] lg:leading-[38px]
     "
+    style={{
+      fontWeight: 500,
+      // Allow full text to show
+      display: "block",
+      overflow: "visible",
+      WebkitLineClamp: "unset", // remove clamp
+    }}
   >
-    {paragraphParts.join(" ")} {/* Join all segments into one <p> for proper line clamping */}
+    {paragraphParts.join(" ")}
   </p>
 </div>
 
 
 
-            {/* "Book Appointment" Button */}
-            <a
-              href="#appointment"
-              className="
-                absolute bottom-6 sm:bottom-4 left-1/2 -translate-x-1/2 z-30 
-                bg-[#205C2A] text-white font-urbanist font-medium 
-                text-xs sm:text-base leading-5 rounded-lg px-4 sm:px-6 
-                py-2 sm:py-3 shadow hover:bg-green-700 transition 
-                w-[150px] flex items-center justify-center whitespace-nowrap
-              "
-            >
-              Book Appointment
-            </a>
 
-            {/* Gradient Overlay for readability */}
-            <div
-              className="
-                absolute bottom-0 left-0 w-full h-60 
-                bg-gradient-to-t from-white/80 to-transparent 
-                pointer-events-none z-10 rounded-lg
-              "
-              style={{ overflow: "hidden" }}
-            />
+           {/* Gradient overlay below button */}
+<div
+  className="
+    absolute left-0 bottom-0 w-full h-70
+    bg-gradient-to-t from-white/100 via-black/45 to-transparent
+    pointer-events-none z-10 rounded-b-lg
+  "
+  style={{ overflow: "hidden" }}
+/>
+
+{/* Book Appointment Button */}
+<a
+  href="#appointment"
+  className="
+    absolute bottom-6 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 
+    bg-[#205C2A] text-white font-urbanist font-medium 
+    text-xs sm:text-base leading-5 rounded-lg px-4 sm:px-6 
+    py-2 sm:py-3 shadow hover:bg-green-700 transition 
+    w-[150px] flex items-center justify-center whitespace-nowrap
+  "
+>
+  Book Appointment
+</a>
+
+
+
 
             {/* Floating Labels */}
-            <div className="hidden md:block absolute inset-0 pointer-events-none max-w-[1008px] mx-auto px-4 z-10">
-              {labelConfig.map((label, i) => (
-                <div
-                  key={i}
-                  className={`absolute ${label.position} flex items-center justify-center text-xs rounded-xl px-3 py-1 text-sm transition-all duration-700 ${label.opacity}`}
-                  style={{
-                    backgroundColor: label.bg,
-                    backdropFilter: "blur(31.5px)",
-                    minWidth: "fit-content",
-                    maxWidth: "240px",
-                  }}
-                >
-                  <span className="text-black font-inter whitespace-normal break-words text-center">
-                    {videoData[label.index].label}
-                  </span>
-                </div>
-              ))}
-            </div>
+<div className="hidden md:block absolute inset-0 pointer-events-none max-w-[1008px] mx-auto px-4 z-10">
+  {labelConfig.map((label, i) => (
+    // Label {i + 1}
+    <div
+      key={i}
+      className={`absolute ${label.position} flex items-center justify-center text-xs rounded-xl px-3 py-1 text-sm transition-all duration-700 ${label.opacity}`}
+      style={{
+        backgroundColor: label.bg,
+        backdropFilter: "blur(31.5px)",
+        minWidth: "fit-content",
+        maxWidth: "calc(100% - 16px)",
+        boxSizing: "border-box",
+        marginRight: i === 2 ? "12px" : undefined, // only label 3
+      }}
+    >
+      <span className="text-black font-inter whitespace-normal break-words text-center">
+        {videoData[label.index].label}
+      </span>
+    </div>
+  ))}
+</div>
+
           </div>
         </div>
 
         {/* Bottom Paragraph — Longer description under video */}
-        <div className="w-full py-6">
-          <p
-            className="
-              font-urbanist font-normal text-[#2A2A2E]
-              text-center mx-auto px-4
-              mt-10 sm:mt-14
-              max-w-full
-              sm:max-w-[60ch] md:max-w-[75ch] lg:max-w-[70ch]
-              break-words whitespace-normal
-              text-lg sm:text-xl md:text-2xl lg:text-[30px]
-              leading-relaxed sm:leading-8 md:leading-[40px]
-            "
-          >
-            At DARE Behavioral Health &amp; Wellness Clinic, we provide comprehensive
-            mental health services with a focus on personalized care. Our experienced
-            team is dedicated to helping you achieve mental wellness through
-            evidence-based treatments and compassionate support.
-          </p>
-        </div>
+  <div className="w-full py-6">
+  <p
+    className="
+      font-urbanist font-Regular text-[#2A2A2E]
+      text-center mx-auto px-4
+      mt-10 sm:mt-14
+      break-words whitespace-normal
+      text-lg sm:text-xl md:text-2xl lg:text-[26px]
+      leading-[24px] sm:leading-8 md:leading-[40px]
+      max-w-full sm:max-w-[60ch]  /* full width on small screens */
+    "
+  >
+    At DARE Behavioral Health &amp; Wellness Clinic, we provide comprehensive
+    mental health services with a focus on personalized care. Our experienced
+    team is dedicated to helping you achieve mental wellness through
+    evidence-based treatments and compassionate support.
+  </p>
+</div>
+
+
 
       </div>
     </section>

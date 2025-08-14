@@ -3,47 +3,33 @@ import SingleQuestions from "./SingleQuestions";
 const Questions = ({ questionData }) => {
   return (
     <section className="max-w-7xl mx-auto font-urbanist">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
-        
-        {/* Left Column: Heading */}
-        <div className="flex justify-center md:justify-start">
-          <h2
-  className="
-    font-urbanist font-medium
-    text-[#2A2A2E]
-    text-[48px]
-    leading-[58px]
-    tracking-[0]
-    text-center md:text-left
-    max-w-[426px]
-  "
->
-  Frequently Asked
-  <br className="hidden md:block" />
-  Questions
-</h2>
+      {/* Stack everything vertically */}
+      <div className="flex flex-col space-y-6 relative">
 
+        {/* Heading on top */}
+        <div>
+          <h2
+            className="
+              font-urbanist font-medium
+              text-[#2A2A2E]
+              text-[48px]
+              leading-[58px]
+              tracking-[0]
+              text-left
+            "
+          >
+            Frequently Asked
+            <br className="hidden md:block" />
+            Questions
+          </h2>
         </div>
 
-        {/* Right Column: Accordion */}
-        <div
-  className="
-    space-y-4
-    flex flex-col
-    items-center md:items-start
-    w-full
-    font-urbanist font-semibold
-    text-[#2A2A2E]
-    text-[18px]
-    leading-[26px]
-    tracking-[0]
-    max-w-full md:max-w-[800px]
-  "
->
-  {questionData?.map((question) => (
-    <SingleQuestions key={question.id} {...question} />
-  ))}
-</div>
+        {/* Accordion below heading, narrower and shifted right */}
+        <div className="flex flex-col space-y-4 md:w-[60%] md:ml-auto">
+          {questionData?.map((question) => (
+            <SingleQuestions key={question.id} {...question} />
+          ))}
+        </div>
 
       </div>
     </section>
@@ -51,3 +37,5 @@ const Questions = ({ questionData }) => {
 };
 
 export default Questions;
+
+
