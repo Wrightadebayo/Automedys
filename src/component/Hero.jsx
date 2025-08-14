@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { videoData } from "../assets/data";
+import { videoData } from "../assets/data.jsx";
 
 const Hero = () => {
   // State to track which video is currently playing

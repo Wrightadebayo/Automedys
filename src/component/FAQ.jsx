@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { questionData } from "../assets/data";
+import { questionData } from "../assets/data.jsx";
 import Questions from "./Questions";
 
 const FAQ = () => {

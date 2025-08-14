@@ -15,7 +15,7 @@ const Questions = ({ questionData }) => {
               text-[48px]
               leading-[58px]
               tracking-[0]
-              text-left
+              text-left mt-8 
             "
           >
             Frequently Asked

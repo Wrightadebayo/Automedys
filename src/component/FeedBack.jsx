@@ -1,6 +1,6 @@
 
 import profileicon from '../assets/profile-icon.jpg'
-import { feedbacks } from '../assets/data'
+import { feedbacks } from '../assets/data.jsx'
 
 const FeedBack = () => {
   return (
@@ -17,7 +17,7 @@ const FeedBack = () => {
             max-w-full
             break-words
             px-2
-            mb-8
+            mb-15
           "
         >
           What Our Patients Say

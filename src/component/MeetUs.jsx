@@ -81,7 +81,7 @@ const MeetUs = () => {
   <img
     src={misterss}
     alt="Dr. Amina Yusuf"
-    className="w-full max-w-sm rounded-md object-cover h-72 md:h-auto md:min-h-full"
+    className="w-full max-w-sm rounded-lg object-cover h-72 md:h-auto md:min-h-full"
     style={{ height: "100%" }}
   />
 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataImages } from '../assets/data';
+import { DataImages } from '../assets/data.jsx';
 import ConditionCard from './ConditionCard';
 
 // Condition section displaying a title, description, and a grid of ConditionCards

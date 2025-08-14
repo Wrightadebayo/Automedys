@@ -1,5 +1,5 @@
 // import { FaUsers,  } from 'react-icons/fa';
-import { therapyCards } from "../assets/data";
+import { therapyCards } from "../assets/data.jsx";
 import {
   FaUser,
   FaUsers,

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Accordiondata } from "../assets/data";
+import { Accordiondata } from "../assets/data.jsx";
 
 const OurServices = () => {
   const [activeIndex, setActiveIndex] = useState(0);
