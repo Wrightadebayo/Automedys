@@ -1,126 +1,108 @@
-import { therapyCards } from "../assets/data.jsx";
+import { therapyCards } from "../assets/data.jsx"; 
 import autoimage from "../assets/autoimg1.png";
 import { FaCheck } from "react-icons/fa";
 
 const ServiceCards = () => {
   return (
-    <section className="w-full bg-white py-10 flex flex-col items-center">
+    <section className="w-full bg-white py-10 px-4">
       {/* Heading */}
-      <h2
-        className="text-center mb-10"
-        style={{
-          fontFamily: 'Urbanist, sans-serif',
-          fontWeight: 600,
-          fontStyle: 'normal',
-          fontSize: '40px',
-          lineHeight: '48px',
-          letterSpacing: '0%',
-          color: '#2A2A2E',
-          width: '312px',
-          height: '48px',
-        }}
-      >
+      <h2 className="max-w-[312px] mx-auto mb-10 text-center font-urbanist font-semibold text-[32px] md:text-[40px] leading-[40px] md:leading-[48px] text-[#2A2A2E]">
         Therapy Services
       </h2>
 
       {/* Cards Grid */}
-      <div className="flex flex-wrap justify-center gap-6 max-w-[1200px]">
+      <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        
         {/* Left Cards */}
-        {therapyCards.slice(0, 2).map((card) => (
-          <div
-            key={card.id}
-            className="relative p-5 shadow-md rounded-md flex flex-col items-start"
-            style={{
-              width: '355px',
-              height: '275px',
-              borderRadius: '8px',
-              backgroundColor: '#F5F5F5',
-            }}
-          >
+        <div className="flex flex-col gap-6">
+          {therapyCards.slice(0, 2).map((card) => (
             <div
-              className="flex items-center justify-center absolute top-7 left-7 shadow-md"
-              style={{
-                width: '52px',
-                height: '52px',
-                borderRadius: '6px',
-                backgroundColor: '#FFFFFF',
-              }}
+              key={card.id}
+              className="relative flex flex-col p-5 shadow-md rounded-md bg-[#F5F5F5] flex-1"
             >
-              {card.icon}
+              {/* Icon */}
+              <div className="flex items-center justify-center absolute shadow-md w-[52px] h-[52px] top-[28px] left-[28px] rounded-md bg-white">
+                {card.icon}
+              </div>
+
+              {/* Title & Text */}
+              <div className="mt-[90px] flex flex-col gap-3">
+                <h3 className="font-urbanist font-semibold text-[18px] md:text-[20px] leading-[26px] md:leading-[28px] text-[#2A2A2E]">
+                  {card.title}
+                </h3>
+                <p className="font-urbanist font-medium text-[15px] md:text-[16px] leading-[22px] md:leading-[24px] text-[#707A75] break-words md:overflow-visible lg:line-clamp-4">
+                  {card.text}
+                </p>
+              </div>
             </div>
-            <div className="mt-[70px]">
-              <h3 className="text-lg font-semibold text-black">{card.title}</h3>
-              <p className="text-gray-600 text-xs">{card.text}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
 
         {/* Middle Image */}
-        <div
-          className="relative shadow-md rounded-md overflow-hidden flex items-end"
-          style={{
-            width: '355px',
-            height: '275px',
-            borderRadius: '8px',
-          }}
-        >
+        <div className="relative w-full rounded shadow-md overflow-hidden flex-1">
           <img
             src={autoimage}
             alt="Therapy"
-            className="w-full h-full object-cover"
+            className="w-full h-auto md:h-full object-cover"
           />
-          <div className="absolute bottom-0 left-0 w-full p-3 bg-white/90 flex flex-col gap-2">
+
+          {/* Overlay Text */}
+          <div className="absolute bottom-4 left-4 flex flex-col gap-2">
             {[
               "Individual Therapy.",
               "Couples & Family Therapy.",
               "Group Therapy.",
               "Child and Adolescent Therapy.",
             ].map((text, index) => (
-              <p
+              <div
                 key={index}
-                className="flex items-center gap-2 text-gray-800 text-sm md:text-base"
+                className="inline-flex max-w-max items-center gap-2 rounded-md shadow px-3 py-2 bg-[#FFFFFFE5]"
               >
-                <span
-                  className="flex items-center justify-center w-5 h-5 bg-white rounded-full shadow"
-                  style={{ width: '52px', height: '52px', borderRadius: '6px' }}
-                >
+                <span className="flex items-center justify-center shadow rounded-full bg-white w-[18px] h-[24px]">
                   <FaCheck size={12} />
                 </span>
-                {text}
-              </p>
+                <span
+                  className="text-gray-900"
+                  style={{
+                    fontFamily: "Urbanist, sans-serif",
+                    fontWeight: 500,
+                    fontStyle: "normal",
+                    fontSize: "15px",
+                    lineHeight: "22px",
+                    letterSpacing: "0%",
+                  }}
+                >
+                  {text}
+                </span>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Right Cards */}
-        {therapyCards.slice(2).map((card) => (
-          <div
-            key={card.id}
-            className="relative p-5 shadow-md rounded-md flex flex-col items-start"
-            style={{
-              width: '355px',
-              height: '275px',
-              borderRadius: '8px',
-              backgroundColor: '#F5F5F5',
-            }}
-          >
+        <div className="flex flex-col gap-6">
+          {therapyCards.slice(2).map((card) => (
             <div
-              className="flex items-center justify-center absolute top-7 left-7 shadow-md"
-              style={{
-                width: '52px',
-                height: '52px',
-                borderRadius: '6px',
-                backgroundColor: '#FFFFFF',
-              }}
+              key={card.id}
+              className="relative flex flex-col p-5 shadow-md rounded-md bg-[#F5F5F5] flex-1"
             >
-              {card.icon}
+              {/* Icon */}
+              <div className="flex items-center justify-center absolute shadow-md w-[52px] h-[52px] top-[28px] left-[28px] rounded-md bg-white">
+                {card.icon}
+              </div>
+
+              {/* Title & Text */}
+              <div className="mt-[90px] flex flex-col gap-3">
+                <h3 className="font-urbanist font-semibold text-[18px] md:text-[20px] leading-[26px] md:leading-[28px] text-[#2A2A2E]">
+                  {card.title}
+                </h3>
+                <p className="font-urbanist font-medium text-[15px] md:text-[16px] leading-[22px] md:leading-[24px] text-[#707A75] break-words md:overflow-visible lg:line-clamp-4">
+                  {card.text}
+                </p>
+              </div>
             </div>
-            <div className="mt-[70px]">
-              <h3 className="text-lg font-semibold text-black">{card.title}</h3>
-              <p className="text-gray-600 text-xs">{card.text}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

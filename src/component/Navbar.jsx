@@ -15,7 +15,7 @@ const Navbar = () => {
     <>
       {/* Main navbar wrapper – fixed at top with white background */}
       <header
-        className="fixed top-0 left-0 w-full bg-[#F9FAFA]  border-gray-200 z-50  w-full max-w-[1440px] h-[678px] mx-auto"
+        className="fixed top-0 left-0 w-full bg-[#F9FAFA]  border-gray-200 z-60  w-full max-w-[1440px] h-[678px] mx-auto"
         style={{ height: "80px" }}
       >
         {/* Container – flex layout to space logo & navigation */}
