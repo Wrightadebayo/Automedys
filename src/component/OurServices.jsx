@@ -85,8 +85,8 @@ const OurServices = () => {
                 <div className="bg-gray-300 h-[1px] rounded-full w-full mx-auto relative mt-2.5">
                   {index === activeIndex && (
                     <div
-                      className="bg-[#205C2A] h-[1px] rounded-full absolute left-0 top-[-0.5px]"
-                      style={{ width: "160px" }}
+                      className=" border: 1px solid bg-[#205C2A] h-[1px] rounded-full absolute  left-0 top-[-0.5px]"
+                      style={{ width: "200px" }}
                     ></div>
                   )}
                 </div>

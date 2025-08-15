@@ -80,8 +80,8 @@ const Hero = () => {
           Welcome to DARE Behavioral <br />
           Health & Wellness Clinic PLLC
         </h1>
-
-        {/* Subheading / Tagline */}
+        {/* Subheading 
+        / Tagline */}
     <p
   className="
     font-urbanist font-medium text-[#58595C] text-center
@@ -91,8 +91,7 @@ const Hero = () => {
     max-w-full  /* ensure it doesn't overflow */
     mx-auto
     break-words  /* wrap long text */
-  "
->
+  ">
   <span className="block">
     Compassionate, evidence-based mental health care tailored to
   </span>

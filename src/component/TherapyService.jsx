@@ -1,108 +1,129 @@
-// import { FaUsers,  } from 'react-icons/fa';
 import { therapyCards } from "../assets/data.jsx";
-import {
-  FaUser,
-  FaUsers,
-  FaUserFriends,
-  FaChild,
-  FaCheck,
-} from "react-icons/fa";
 import autoimage from "../assets/autoimg1.png";
-
-const iconMap = {
-  FaUser: <FaUser size={20} className="text-black" />,
-  FaUsers: <FaUsers size={20} className="text-black" />,
-  FaUserFriends: <FaUserFriends size={20} className="text-black" />,
-  FaChild: <FaChild size={20} className="text-black" />,
-};
+import { FaCheck } from "react-icons/fa";
 
 const ServiceCards = () => {
   return (
-    <section className="bg-gray-100 py-10 px-4">
-      <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">
+    <section className="w-full bg-white py-10 flex flex-col items-center">
+      {/* Heading */}
+      <h2
+        className="text-center mb-10"
+        style={{
+          fontFamily: 'Urbanist, sans-serif',
+          fontWeight: 600,
+          fontStyle: 'normal',
+          fontSize: '40px',
+          lineHeight: '48px',
+          letterSpacing: '0%',
+          color: '#2A2A2E',
+          width: '312px',
+          height: '48px',
+        }}
+      >
         Therapy Services
       </h2>
 
-      <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Cards Grid */}
+      <div className="flex flex-wrap justify-center gap-6 max-w-[1200px]">
         {/* Left Cards */}
-        <div className="flex flex-col justify-between h-[300px] space-y-3">
-          {therapyCards.slice(0, 2).map((card) => (
+        {therapyCards.slice(0, 2).map((card) => (
+          <div
+            key={card.id}
+            className="relative p-5 shadow-md rounded-md flex flex-col items-start"
+            style={{
+              width: '355px',
+              height: '275px',
+              borderRadius: '8px',
+              backgroundColor: '#F5F5F5',
+            }}
+          >
             <div
-              key={card.id}
-              className="flex flex-col justify-between bg-white p-5 shadow rounded-md flex-1"
+              className="flex items-center justify-center absolute top-7 left-7 shadow-md"
+              style={{
+                width: '52px',
+                height: '52px',
+                borderRadius: '6px',
+                backgroundColor: '#FFFFFF',
+              }}
             >
-              <div className="w-10 h-2 flex items-center justify-center rounded shadow mb-3">
-                {iconMap[card.iconName]}
-              </div>
+              {card.icon}
+            </div>
+            <div className="mt-[70px]">
               <h3 className="text-lg font-semibold text-black">{card.title}</h3>
               <p className="text-gray-600 text-xs">{card.text}</p>
             </div>
-          ))}
+          </div>
+        ))}
+
+        {/* Middle Image */}
+        <div
+          className="relative shadow-md rounded-md overflow-hidden flex items-end"
+          style={{
+            width: '355px',
+            height: '275px',
+            borderRadius: '8px',
+          }}
+        >
+          <img
+            src={autoimage}
+            alt="Therapy"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute bottom-0 left-0 w-full p-3 bg-white/90 flex flex-col gap-2">
+            {[
+              "Individual Therapy.",
+              "Couples & Family Therapy.",
+              "Group Therapy.",
+              "Child and Adolescent Therapy.",
+            ].map((text, index) => (
+              <p
+                key={index}
+                className="flex items-center gap-2 text-gray-800 text-sm md:text-base"
+              >
+                <span
+                  className="flex items-center justify-center w-5 h-5 bg-white rounded-full shadow"
+                  style={{ width: '52px', height: '52px', borderRadius: '6px' }}
+                >
+                  <FaCheck size={12} />
+                </span>
+                {text}
+              </p>
+            ))}
+          </div>
         </div>
-
-        {/* Middle Image with Text Overlays */}
-       {/* Middle Image with Text Overlays */}
-<div className="relative h-[250px] sm:h-[300px] md:h-auto w-full rounded shadow-md overflow-hidden">
-  <img
-    src={autoimage}
-    alt="Therapy"
-    className="w-full h-full object-cover"
-  />
-
-  <div className="absolute bottom-0 left-0 w-full px-4 py-4 md:px-6 flex flex-col items-start text-left space-y-2 bg-gradient-to-t from-white/90 via-white/70 to-transparent text-xs">
-    {[
-      "Individual Therapy.",
-      "Couples & Family Therapy.",
-      "Group Therapy.",
-      "Child and Adolescent Therapy.",
-      
-    ].map((text, index) => (
-      <p
-        key={index}
-        className="bg-white text-gray-800 text-sm md:text-base flex items-center gap-2 px-3 py-1 rounded shadow"
-      >
-        <span className="bg-white text-black rounded-full p-1 flex items-center justify-center shadow w-5 h-5">
-          <FaCheck size={12} />
-        </span>
-        {text}
-      </p>
-    ))}
-  </div>
-</div>
-
 
         {/* Right Cards */}
-        <div className="flex flex-col justify-between h-[300px] space-y-2">
-          {therapyCards.slice(2).map((card) => (
+        {therapyCards.slice(2).map((card) => (
+          <div
+            key={card.id}
+            className="relative p-5 shadow-md rounded-md flex flex-col items-start"
+            style={{
+              width: '355px',
+              height: '275px',
+              borderRadius: '8px',
+              backgroundColor: '#F5F5F5',
+            }}
+          >
             <div
-              key={card.id}
-              className="flex flex-col justify-between bg-white p-5 shadow rounded-md flex-1"
+              className="flex items-center justify-center absolute top-7 left-7 shadow-md"
+              style={{
+                width: '52px',
+                height: '52px',
+                borderRadius: '6px',
+                backgroundColor: '#FFFFFF',
+              }}
             >
-              <div className="w-10 h-2 flex items-center justify-center rounded shadow mb-3">
-                {iconMap[card.iconName]}
-              </div>
+              {card.icon}
+            </div>
+            <div className="mt-[70px]">
               <h3 className="text-lg font-semibold text-black">{card.title}</h3>
               <p className="text-gray-600 text-xs">{card.text}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
 };
 
 export default ServiceCards;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
