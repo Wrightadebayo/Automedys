@@ -5,7 +5,7 @@ import daily3 from '../assets/daily3.png';
 
 const defaultImages = [
   {
-    src: daily1,
+    src: daily3,
     text: 'Mindful & Stress Management',
     subtext:
       'Workshops and guided practices that cultivate present-moment awareness, resilience, and effective stress-reduction techniques.',
@@ -17,7 +17,7 @@ const defaultImages = [
       'Educational and peer-led sessions covering topics like anxiety management, depression coping strategies, and life-skills development.',
   },
   {
-    src: daily3,
+    src: daily1,
     text: 'Corporate & School Partnership',
     subtext:
       'Customized programs and seminars on-site or virtually to promote mental health & well-being in workplace and educational settings.',
@@ -29,8 +29,8 @@ const WellnessPage = ({ images = defaultImages }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prevIndex) => (prevIndex + 1) % images.length);
-    }, 7000); // 7 seconds
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 7000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -43,45 +43,95 @@ const WellnessPage = ({ images = defaultImages }) => {
         </h2>
       </div>
 
-      {/* Auto-Switching Image Box */}
+      {/* Image Container */}
       <div className="relative w-full rounded-md overflow-hidden shadow-lg flex justify-center">
         {/* Background Image */}
         <img
           key={current}
           src={images[current].src}
           alt="Wellness"
+          className="object-cover w-[1136px] h-[558px] rounded-lg relative z-10"
+        />
+
+        {/* Green Blur Overlay */}
+        <div
+          className="absolute top-0 left-0 z-20 rounded-lg pointer-events-none"
           style={{
             width: '1136px',
             height: '558px',
-            opacity: 1,
-            borderRadius: '8px',
+            backgroundColor: '#205C2A',
+            backdropFilter: 'blur(114px)',
+            opacity: 0.5,
+            background: 'linear-gradient(to top, rgba(32,99,22,1), rgba(32,92,42,0.3))',
           }}
-          className="object-cover"
-        />
+        ></div>
 
-        {/* Green Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-green-700 via-green-500/60 to-transparent opacity-90 z-10 rounded-lg" />
+        {/* Soft Green Background under Text */}
+        <div
+          className="absolute bottom-0 left-0 z-15 pointer-events-none"
+          style={{
+            width: '100%',
+            height: '190px',
+            background: 'linear-gradient(to top, rgba(32,92,42,0.6), rgba(32,92,42,0))',
+            backdropFilter: 'blur(5px)',
+          }}
+        ></div>
 
         {/* Text Overlay */}
-        <div className="absolute bottom-6 left-4 md:left-8 z-20 text-white max-w-[90%] md:max-w-sm">
-          <h1 className="text-base md:text-xl font-semibold bg-white/20 px-3 py-2 rounded break-words">
+        <div
+          className="absolute z-30 flex flex-col"
+          style={{
+            width: '833px',
+            height: '122px',
+            top: '376px',
+            left: '40px',
+            gap: '12px',
+            opacity: 1,
+          }}
+        >
+          <h1
+            style={{
+              fontFamily: 'Urbanist',
+              fontWeight: 700,
+              fontStyle: 'bold',
+              fontSize: '36px',
+              lineHeight: '46px',
+              letterSpacing: '0%',
+              color: '#FFFFFF',
+              wordBreak: 'break-word',
+            }}
+          >
             {images[current].text}
           </h1>
-          <p className="mt-2 text-xs md:text-sm bg-white/20 px-3 py-1 rounded break-words">
+          <p
+            style={{
+              fontFamily: 'Urbanist',
+              fontWeight: 500,
+              fontStyle: 'medium',
+              fontSize: '24px',
+              lineHeight: '32px',
+              letterSpacing: '0%',
+              color: '#F2F2F2',
+              wordBreak: 'break-word',
+              marginTop: '0',
+            }}
+          >
             {images[current].subtext}
           </p>
+        </div>
 
-          {/* Carousel Indicators */}
-          <div className="flex gap-2 mt-4">
-            {images.map((_, index) => (
-              <span
-                key={index}
-                className={`block h-1 flex-1 rounded-full transition-all duration-300 ${
-                  index === current ? 'bg-white w-8' : 'bg-white/50 w-4'
-                }`}
-              ></span>
-            ))}
-          </div>
+        {/* Horizontal Lines */}
+        <div className="absolute bottom-4 left-0 right-0 flex gap-2 px-4 md:px-8 z-30">
+          {images.map((_, index) => (
+            <div key={index} className="relative flex-1 h-1 rounded-full bg-[#32783E]">
+              {index === current && (
+                <div
+                  className="h-full bg-[#8FEBBD] rounded-full absolute top-0 left-0"
+                  style={{ width: '50%' }}
+                ></div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -89,3 +139,4 @@ const WellnessPage = ({ images = defaultImages }) => {
 };
 
 export default WellnessPage;
+
