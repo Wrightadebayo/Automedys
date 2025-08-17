@@ -35,10 +35,10 @@ const WellnessPage = ({ images = defaultImages }) => {
   }, [images.length]);
 
   return (
-    <section className="relative mx-auto bg-white rounded-lg overflow-visible w-[90%] max-w-[1320px] px-4 md:px-12 py-12">
+    <section className="relative mx-auto bg-white rounded-lg overflow-visible w-[95%] max-w-[1320px] px-4 md:px-12 py-12">
       {/* Section Heading */}
       <div className="text-center mb-10">
-        <h2 className="font-urbanist font-semibold text-[32px] sm:text-[36px] md:text-[40px] leading-[40px] sm:leading-[44px] md:leading-[48px] text-[#2A2A2E] max-w-[1136px] mx-auto break-words">
+        <h2 className="font-urbanist font-semibold text-[28px] sm:text-[32px] md:text-[40px] leading-tight text-[#2A2A2E] max-w-[95%] md:max-w-[1136px] mx-auto break-words">
           Wellness Programs
         </h2>
       </div>
@@ -50,15 +50,15 @@ const WellnessPage = ({ images = defaultImages }) => {
           key={current}
           src={images[current].src}
           alt="Wellness"
-          className="object-cover w-[1136px] h-[558px] rounded-lg relative z-10"
+          className="object-cover w-full md:w-[1136px] h-[320px] sm:h-[420px] md:h-[558px] rounded-lg relative z-10"
         />
 
         {/* Green Blur Overlay */}
         <div
           className="absolute top-0 left-0 z-20 rounded-lg pointer-events-none"
           style={{
-            width: '1136px',
-            height: '558px',
+            width: '100%',
+            height: '100%',
             backgroundColor: '#205C2A',
             backdropFilter: 'blur(114px)',
             opacity: 0.5,
@@ -71,7 +71,7 @@ const WellnessPage = ({ images = defaultImages }) => {
           className="absolute bottom-0 left-0 z-15 pointer-events-none"
           style={{
             width: '100%',
-            height: '190px',
+            height: '180px',
             background: 'linear-gradient(to top, rgba(32,92,42,0.6), rgba(32,92,42,0))',
             backdropFilter: 'blur(5px)',
           }}
@@ -79,54 +79,29 @@ const WellnessPage = ({ images = defaultImages }) => {
 
         {/* Text Overlay */}
         <div
-          className="absolute z-30 flex flex-col"
+          className="absolute z-30 flex flex-col px-4 sm:px-6 md:px-10"
           style={{
-            width: '833px',
-            height: '122px',
-            top: '376px',
-            left: '40px',
+            bottom: '60px',
+            left: '0',
+            width: '100%',
             gap: '12px',
-            opacity: 1,
           }}
         >
-          <h1
-            style={{
-              fontFamily: 'Urbanist',
-              fontWeight: 700,
-              fontStyle: 'bold',
-              fontSize: '36px',
-              lineHeight: '46px',
-              letterSpacing: '0%',
-              color: '#FFFFFF',
-              wordBreak: 'break-word',
-            }}
-          >
+          <h1 className="font-urbanist font-bold text-[20px] sm:text-[28px] md:text-[36px] leading-snug sm:leading-[38px] md:leading-[46px] text-white max-w-full sm:max-w-[90%] md:max-w-[833px] break-words">
             {images[current].text}
           </h1>
-          <p
-            style={{
-              fontFamily: 'Urbanist',
-              fontWeight: 500,
-              fontStyle: 'medium',
-              fontSize: '24px',
-              lineHeight: '32px',
-              letterSpacing: '0%',
-              color: '#F2F2F2',
-              wordBreak: 'break-word',
-              marginTop: '0',
-            }}
-          >
+          <p className="font-urbanist font-medium text-[14px] sm:text-[18px] md:text-[24px] leading-[20px] sm:leading-[26px] md:leading-[32px] text-[#F2F2F2] max-w-full sm:max-w-[90%] md:max-w-[833px] break-words mt-0">
             {images[current].subtext}
           </p>
         </div>
 
         {/* Horizontal Lines */}
-        <div className="absolute bottom-4 left-0 right-0 flex gap-2 px-4 md:px-8 z-30">
+        <div className="absolute bottom-4 left-0 right-0 flex gap-2 px-4 sm:px-6 md:px-8 z-30">
           {images.map((_, index) => (
             <div key={index} className="relative flex-1 h-1 rounded-full bg-[#32783E]">
               {index === current && (
                 <div
-                  className="h-full bg-[#8FEBBD] rounded-full absolute top-0 left-0"
+                  className="h-full bg-[#8FEBBD] rounded-full absolute top-0 left-0 transition-all duration-500"
                   style={{ width: '50%' }}
                 ></div>
               )}
@@ -139,4 +114,3 @@ const WellnessPage = ({ images = defaultImages }) => {
 };
 
 export default WellnessPage;
-

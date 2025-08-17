@@ -265,7 +265,7 @@ export const cardData = [
     ),
     title: "Psychiatric Evaluation",
     subtitle:
-      "Comprehensive assessments to diagnose mental health conditions and guide treatment.",
+      "Comprehensive assessments designed to accurately diagnose mental health conditions and inform personalized treatment plans.",
   },
   {
     image: (
@@ -294,7 +294,7 @@ export const cardData = [
     ),
     title: "Medication Management",
     subtitle:
-      "Ongoing medication review to ensure effectiveness and reduce side effects.",
+      "Ongoing monitoring and adjustment of psychiatric medications to optimize benefits and minimize side effects.",
   },
   {
     image: (
@@ -313,6 +313,6 @@ export const cardData = [
     ),
     title: "Neuropsychological Testing",
     subtitle:
-      "Cognitive tests to identify memory, attention, and reasoning strengths/weaknesses.",
+      "In depth cognitive evaluations to identify strenghts and challenges in areas such as memory, attention, and executive functioning.",
   },
 ];

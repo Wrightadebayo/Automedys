@@ -6,9 +6,9 @@ const ServiceCards = () => {
   return (
     <section className="w-full bg-white py-10 px-4">
       {/* Heading */}
-      <h2 className="max-w-[312px] mx-auto mb-10 text-center font-urbanist font-semibold text-[32px] sm:text-[32px] md:text-[40px] leading-[40px] sm:leading-[40px] md:leading-[48px] text-[#2A2A2E]">
+      <h1 className="max-w-[312px] mx-auto mb-10 text-center font-urbanist font-semibold text-[32px] sm:text-[32px] md:text-[40px] leading-[40px] sm:leading-[40px] md:leading-[48px] text-[#2A2A2E]">
         Therapy Services
-      </h2>
+      </h1>
 
       {/* Cards Grid */}
       <div className="max-w-[1120px] mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
