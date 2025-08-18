@@ -172,13 +172,16 @@ const About = () => {
     </div>
   </div>
 </div>
-<div className="w-full bg-white px-4 py-8 sm:py-10 md:py-16 mt-4 rounded-md flex items-center justify-center">
-  <p className="font-urbanist font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[28px] sm:leading-[32px] md:leading-[34px] text-[#2A2A2E] max-w-[90%] sm:max-w-[600px] md:max-w-[780px] text-center">
-    Whether you're just beginning your mental health journey or seeking
-    to deepen your wellness practice, our team is here to guide and
-    support you every step of the way.
-  </p>
+<div className="w-full bg-white px-4 py-12 sm:py-16 md:py-20 mt-4 flex justify-center">
+  <div className="max-w-[780px] w-full">
+    <p className="font-urbanist font-semibold text-[20px] sm:text-[22px] md:text-[24px] leading-[28px] sm:leading-[32px] md:leading-[34px] text-[#2A2A2E] text-center">
+      Whether you're just beginning your mental health journey or seeking
+      to deepen your wellness practice, our team is here to guide and
+      support you every step of the way.
+    </p>
+  </div>
 </div>
+
 
 
 

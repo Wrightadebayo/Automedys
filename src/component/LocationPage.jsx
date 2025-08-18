@@ -6,105 +6,145 @@ import autoimage8 from "../assets/autoimage8.png";
 
 const LocationPage = () => {
   return (
-    <section className="max-w-[1000px] mx-auto px-4 py-10 bg-white">
-      {/* Heading */}
-      <h1 className="text-3xl font-bold text-center text-black mb-10">
-        Locations & Hours
-      </h1>
+    <div className="w-full bg-white flex justify-center items-center">
+      <section className="max-w-[1440px] w-full px-4 py-10 space-y-16">
+        {/* Heading */}
+        <h1 className="font-urbanist font-medium text-[48px] leading-[58px] text-[#2A2A2E] text-center mx-auto max-w-[1136px]">
+          Locations & Hours
+        </h1>
 
-      {/* Main Clinic Section */}
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-        <div className="w-full md:w-[450px] space-y-6 text-gray-700 text-sm">
-          <div>
-            <h2 className="text-xl pb-3 font-semibold text-black">Main Clinic</h2>
-            <h5 className="font-medium pb-2 text-sm">Address</h5>
-            <div className="flex items-start gap-3 p-2 bg-gray-100 rounded">
-              <FaMapMarkerAlt className="text-black mt-1" />
-              <p>123 Wellness Way, [City], [State] [ZIP]</p>
+        {/* Main Clinic Section */}
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-10 md:gap-[55px] w-full max-w-[1136px] mx-auto">
+          <div className="flex-1 w-full sm:w-[300px] space-y-6 text-gray-700 text-sm text-center md:text-left">
+            <h2 className="text-[30px] leading-[38px] font-urbanist font-semibold text-black">
+              Main Clinic
+            </h2>
+
+            {/* Address */}
+            <div className="flex flex-col gap-2 w-full items-center md:items-start">
+              <h5 className="text-[20px] leading-[28px] font-urbanist font-semibold text-[#2A2A2E]">
+                Address
+              </h5>
+              <div className="inline-flex items-center gap-2 bg-[#F5F5F5] rounded-[8px] px-3 py-1.5">
+                <FaMapMarkerAlt className="text-black w-5 h-5" />
+                <p className="text-[16px] leading-[24px] font-urbanist font-medium text-[#2A2A2E] break-words">
+                  123 Wellness Way, [City], [State] [ZIP]
+                </p>
+              </div>
+            </div>
+
+            {/* Hours */}
+            <div className="flex flex-col gap-2 w-full max-w-[280px] items-center md:items-start">
+              <h2 className="text-[16px] font-urbanist font-semibold text-[#2A2A2E]">Hours:</h2>
+              <div className="flex items-center gap-2 p-2 bg-[#F5F5F5] rounded-[8px] justify-center md:justify-start">
+                <FaClock className="text-black w-[20px] h-[20px]" />
+                <p className="text-[16px] leading-[24px] font-urbanist font-medium text-[#2A2A2E]">
+                  Monday - Friday: 8 AM - 6 PM
+                </p>
+              </div>
+              <div className="flex items-center gap-2 p-2 bg-[#F5F5F5] rounded-[8px] justify-center md:justify-start">
+                <FaClock className="text-black w-[20px] h-[20px]" />
+                <p className="text-[16px] leading-[24px] font-urbanist font-medium text-[#2A2A2E]">
+                  Saturday: 9 AM - 1 PM
+                </p>
+              </div>
+              <div className="flex items-center gap-2 p-2 bg-[#F5F5F5] rounded-[8px] justify-center md:justify-start">
+                <IoClose className="text-red-600 w-[20px] h-[20px]" />
+                <p className="text-[16px] leading-[24px] font-urbanist font-medium text-[#2A2A2E]">
+                  Sunday: Closed
+                </p>
+              </div>
             </div>
           </div>
-          <div>
-            <h2 className="text-xs font-semibold">Hours:</h2>
-            <div className="flex items-start gap-3 p-2 bg-gray-100 rounded">
-              <FaClock className="text-black mt-1" />
-              <p>Monday - Friday: 8 AM - 6 PM</p>
-            </div>
-            <div className="flex items-start gap-3 p-2 bg-gray-100 rounded">
-              <FaClock className="text-black mt-1" />
-              <p>Saturday: 9 AM - 1 PM</p>
-            </div>
-            <div className="flex items-start gap-3 p-2 bg-gray-100 rounded">
-              <IoClose className="text-red-600 mt-1" />
-              <p>Sunday: Closed</p>
-            </div>
+
+          {/* Main Clinic Image */}
+          <div className="flex-1 flex justify-center mt-6 md:mt-0">
+            <img
+              src={autoimage6}
+              alt="Main Clinic"
+              className="w-full max-w-[781px] h-auto object-cover rounded-[8px] shadow-md"
+            />
           </div>
         </div>
 
-        <div className="w-full md:w-[450px]">
+        {/* Satellite Office Section */}
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-10 md:gap-[55px] w-full max-w-[1136px] mx-auto">
+          <div className="flex-1 w-full sm:w-[300px] space-y-6 text-gray-700 text-sm text-center md:text-left">
+            <h2 className="text-[30px] leading-[38px] font-urbanist font-semibold text-[#2A2A2E]">
+              Texas Satellite Office
+            </h2>
+
+            {/* Address */}
+            <h5 className="text-[20px] leading-[28px] font-urbanist font-semibold text-[#2A2A2E]">
+              Address
+            </h5>
+            <div className="inline-flex items-center gap-2 bg-[#F5F5F5] rounded-[8px] px-3 py-1.5">
+              <FaMapMarkerAlt className="text-black w-5 h-5" />
+              <p className="text-[16px] leading-[24px] font-urbanist font-medium text-[#2A2A2E] break-words">
+                456 Healing Blvd, [City], [State], [ZIP]
+              </p>
+            </div>
+
+            {/* Hours */}
+            <div className="flex flex-col gap-2 w-full max-w-[280px] items-center md:items-start">
+              <h2 className="text-[20px] leading-[28px] font-urbanist font-semibold text-[#2A2A2E]">Hours:</h2>
+              <div className="flex items-center gap-2 p-2 bg-[#F5F5F5] rounded-[8px] justify-center md:justify-start">
+                <FaClock className="text-black w-[20px] h-[20px]" />
+                <p className="text-[16px] leading-[24px] font-urbanist font-medium text-[#2A2A2E]">
+                  Monday - Thursday: 9 AM - 5 PM
+                </p>
+              </div>
+              <div className="flex items-center gap-2 p-2 bg-[#F5F5F5] rounded-[8px] justify-center md:justify-start">
+                <FaClock className="text-black w-[20px] h-[20px]" />
+                <p className="text-[16px] leading-[24px] font-urbanist font-medium text-[#2A2A2E]">
+                  Friday: 9 AM - 3 PM
+                </p>
+              </div>
+              <div className="flex items-center gap-2 p-2 bg-[#F5F5F5] rounded-[8px] justify-center md:justify-start">
+                <IoClose className="text-red-600 w-[20px] h-[20px]" />
+                <p className="text-[16px] leading-[24px] font-urbanist font-medium text-[#2A2A2E]">
+                  Saturday - Sunday: Closed
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Satellite Office Image */}
+          <div className="flex-1 flex justify-center mt-6 md:mt-1">
+            <img
+              src={autoimage7}
+              alt="Satellite Office"
+              className="w-full max-w-[701px] h-auto object-cover rounded-[8px] shadow-md"
+            />
+          </div>
+        </div>
+
+        {/* Telehealth Section */}
+        <div className="relative w-full max-w-[1136px] mx-auto mt-16">
           <img
-            src={autoimage6}
-            alt="Main Clinic"
-            className="w-full h-72 object-cover rounded-md shadow-md"
+            src={autoimage8}
+            alt="Telehealth"
+            className="w-full h-auto object-cover rounded-[8px] shadow-md"
           />
-        </div>
-      </div>
 
-      {/* Satellite Office Section */}
-      <div className="flex flex-col mt-20 md:flex-row justify-between items-start gap-8">
-        <div className="w-full md:w-[450px] space-y-6 text-gray-700 text-sm">
-          <div>
-            <h2 className="text-xl pb-3 font-semibold text-black">Texas Satellite Office</h2>
-            <h5 className="font-medium pb-2 text-sm">Address</h5>
-            <div className="flex items-start gap-3 p-2 bg-gray-100 rounded">
-              <FaMapMarkerAlt className="text-black mt-1" />
-              <p>456 Healing Blvd, [City], [State], [ZIP]</p>
-            </div>
-          </div>
-          <div>
-            <h2 className="text-xs font-semibold">Hours:</h2>
-            <div className="flex items-start gap-3 p-2 bg-gray-100 rounded">
-              <FaClock className="text-black mt-1" />
-              <p>Monday - Thursday: 9 AM - 5 PM</p>
-            </div>
-            <div className="flex items-start gap-3 p-2 bg-gray-100 rounded">
-              <FaClock className="text-black mt-1" />
-              <p>Friday: 9 AM - 3 PM</p>
-            </div>
-            <div className="flex items-start gap-3 p-2 bg-gray-100 rounded">
-              <IoClose className="text-red-600 mt-1" />
-              <p>Saturday - Sunday: Closed</p>
+          <div className="absolute inset-0 bg-gradient-to-t from-green-700/90 via-green-600/40 to-transparent rounded-[8px] flex items-end justify-start p-3 sm:p-4">
+            <div className="flex flex-col justify-end gap-2 sm:gap-4 w-full sm:max-w-[80%] text-center md:text-left">
+              <h2 className="text-[22px] sm:text-[36px] leading-[26px] sm:leading-[46px] font-urbanist font-semibold text-white">
+                Telehealth Services
+              </h2>
+
+              <p className="text-[16px] sm:text-[24px] leading-[20px] sm:leading-[32px] font-urbanist font-medium text-[#F2F2F2]">
+                Secure video appointments available Monday–Friday, 8 AM–8 PM.
+              </p>
+
+              <button className="w-full sm:w-[202px] h-[48px] bg-[#8FEBBD] rounded-[8px] text-[#131313] text-[16px] leading-[24px] font-urbanist font-semibold mt-1 sm:mt-2">
+                Book an appointment
+              </button>
             </div>
           </div>
         </div>
-
-        <div className="w-full md:w-[450px]">
-          <img
-            src={autoimage7}
-            alt="Satellite Office"
-            className="w-full h-72 object-cover rounded-md shadow-md"
-          />
-        </div>
-      </div>
-
-      {/* Telehealth Services Image with Text Overlay */}
-      <div className="relative w-full h-[400px] mt-20">
-        <img
-          src={autoimage8}
-          alt="Telehealth"
-          className="w-full h-full object-cover rounded-md shadow-md"
-        />
-
-        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-green-700/90 via-green-600/50 to-transparent text-white p-6 rounded-b-md">
-          <h2 className="text-xl font-semibold">Telehealth Services</h2>
-          <p className="text-sm mb-3">
-            Secure video appointments available Monday–Friday, 8AM–8PM.
-          </p>
-          <button className="bg-green-400 text-black-700 px-4 py-2 text-sm font-medium rounded shadow">
-            Book an appointment
-          </button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
