@@ -105,7 +105,7 @@ const Hero = () => {
         <div className="w-full flex flex-col items-center gap-6 mt-6 mb-12 px-2 sm:px-4 md:px-0  relative">
           <div
             className="
-              relative rounded-lg overflow-hidden shadow-md transition-all duration-1000 
+              relative rounded-lg overflow-hidden  transition-all duration-1000 
               w-full max-w-[1000px] bg-gray-100 h-[240px] md:aspect-video md:h-auto
             "
           >
@@ -162,15 +162,15 @@ const Hero = () => {
 
 
 
-           {/* Gradient overlay below button */}
 <div
   className="
-    absolute left-0 bottom-0 w-full h-70
-    bg-gradient-to-t from-white/100 via-black/45 to-transparent
+    absolute left-0 bottom-0 w-full h-[100px]
+    bg-gradient-to-t from-white/100 via-white/90 via-black/30 to-transparent
     pointer-events-none z-10 rounded-b-lg
   "
   style={{ overflow: "hidden" }}
 />
+
 
 {/* Book Appointment Button */}
 <a
