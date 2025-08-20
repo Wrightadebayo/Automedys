@@ -77,24 +77,29 @@ const About = () => {
         </div>
 
 {/* Our Story */}
-<div className="relative mt-16 flex flex-col items-center bg-white rounded-lg px-4 py-6 mx-auto w-full max-w-full md:max-w-[960px]">
-  <div className="flex flex-col gap-6 w-full items-center">
-    <h1 className="font-urbanist font-semibold text-[28px] sm:text-[32px] md:text-[40px] leading-[36px] sm:leading-[40px] md:leading-[48px] text-center text-[#2A2A2E]">
-  Our Story
-</h1>
+<div className="w-full bg-white py-28 ">
+  <div className="relative flex flex-col items-center px-4 mx-auto w-full max-w-[960px]">
+    <h1 className="font-urbanist font-semibold text-[28px] sm:text-[32px] md:text-[40px] 
+                   leading-[36px] sm:leading-[40px] md:leading-[48px] 
+                   text-center text-[#2A2A2E]">
+      Our Story
+    </h1>
 
-
-    <div className="bg-white w-full flex items-center justify-center px-2 sm:px-4 md:px-6">
-<p className="font-urbanist font-medium text-[20px] leading-[30px] text-center text-[#2A2A2E] w-full md:w-[90%]">
-  Founded in 2015 by a multidisciplinary team of clinicians, DARE Behavioral Health and Wellness Clinic grew out of
-  a shared vision to bridge gaps in mental health care by combining personalized therapy, psychiatric expertise, and innovative wellness
-  programming. From our first location in downtown [City] to our expanding satellite offices, we've remained committed to adapting our services to
-  meet evolving community needs—all while preserving the warm, supportive environment our clients value.
-</p>
-
+    <div className="w-full flex items-center justify-center px-2 sm:px-4 md:px-6 mt-6">
+      <p className="font-urbanist font-medium text-[20px] leading-[30px] 
+                     text-center text-[#2A2A2E] w-full md:w-[90%]">
+        Founded in 2015 by a multidisciplinary team of clinicians, DARE Behavioral 
+        Health and Wellness Clinic grew out of a shared vision to bridge gaps in 
+        mental health care by combining personalized therapy, psychiatric expertise, 
+        and innovative wellness programming. From our first location in downtown 
+        [City] to our expanding satellite offices, we've remained committed to 
+        adapting our services to meet evolving community needs—all while preserving 
+        the warm, supportive environment our clients value.
+      </p>
     </div>
   </div>
 </div>
+
 
  {/* Leadership Team */}
         <div className="mt-32 w-full max-w-full md:max-w-[1136px] mx-auto flex flex-col items-center">

@@ -61,12 +61,13 @@ const Hero = () => {
       id="Home"
       className="
         relative flex flex-col items-center justify-center text-center 
-        px-4 pt-8 sm:pt-12 md:pt-16 pb-20 min-h-screen bg-white 
+        px-4 pt-8 sm:pt-12 md:pt-16 pb-20 min-h-screen bg-[#F9FAFA];
+ 
         transition-colors duration-1000
       "
     >
       {/* Container for the content with max width */}
-      <div className="w-full max-w-[1200px] mx-auto flex flex-col items-center">
+      <div className="w-full max-w-[1200px] mx-auto flex flex-col items-center ">
 
         {/* Main Heading */}
         <h1
@@ -74,7 +75,7 @@ const Hero = () => {
             font-urbanist font-medium text-[#2A2A2E] text-center
             leading-[38px] sm:leading-[48px] md:leading-[60px] lg:leading-[86px]
             text-3xl sm:text-4xl md:text-5xl lg:text-[72px]
-            max-w-full sm:max-w-[700px] md:max-w-[900px] lg:max-w-[955px]
+            max-w-full sm:max-w-[700px] md:max-w-[900px] lg:max-w-[955px] 
           "
         >
           Welcome to DARE Behavioral <br />
@@ -165,7 +166,7 @@ const Hero = () => {
 <div
   className="
     absolute left-0 bottom-0 w-full h-[100px]
-    bg-gradient-to-t from-white/100 via-white/90 via-black/30 to-transparent
+    bg-gradient-to-t from-white/100 via-white/90 via-black/50 to-transparent
     pointer-events-none z-10 rounded-b-lg
   "
   style={{ overflow: "hidden" }}

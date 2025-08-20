@@ -17,11 +17,17 @@ const Footer = () => {
             to="/"
             className="flex items-center gap-4 hover:opacity-80 transition"
           >
-            <img
+   <img
   src={behalogo}
   alt="Dare Behavioral Health Wellness Logo"
-  className="w-36 h-28 rounded object-contain max-w-full"
+  className="
+    w-24 h-20              /* smaller on mobile */
+    sm:w-28 sm:h-24        /* medium size on sm screens */
+    md:w-36 md:h-28        /* full size on md+ screens */
+    rounded object-contain max-w-full
+  "
 />
+
 
 <h2
   className="
